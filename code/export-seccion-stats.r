@@ -35,7 +35,7 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
 
-edon <- 7; edo <- edos[edon]
+edon <- 16; edo <- edos[edon]
 
 # state's borders
 tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
@@ -61,39 +61,9 @@ dat$ord <- 1:nrow(dat)
 l <- data.frame(ord = dat$ord, edon = dat$entidad, seccion = dat$seccion); l$median <- l$sd <- l$mean <- NA; l$note <- ""
 ses <- l$seccion
 
-# create data frames to rbind state/year stats
-if (length(intersect(ls(), paste0("l", 1992:2018)))==0) l1992 <- l1993 <- l1994 <- l1995 <- l1996 <- l1997 <- l1998 <- l1999 <- l2000 <- l2001 <- l2002 <- l2003 <- l2004 <- l2005 <- l2006 <- l2007 <- l2008 <- l2009 <- l2010 <- l2012 <- l2013 <- l2014 <- l2015 <- l2016 <- l2017 <- l2018 <- data.frame()
-
 calc.yr <- function(yr){
     #yr <- 2000 # debug
-    # open existing year's data frame, where l will be rbound 
-    if (yr==1992) ly <- l1992
-    if (yr==1993) ly <- l1993
-    if (yr==1994) ly <- l1994
-    if (yr==1995) ly <- l1995
-    if (yr==1996) ly <- l1996
-    if (yr==1997) ly <- l1997
-    if (yr==1998) ly <- l1998
-    if (yr==1999) ly <- l1999
-    if (yr==2000) ly <- l2000
-    if (yr==2001) ly <- l2001
-    if (yr==2002) ly <- l2002
-    if (yr==2003) ly <- l2003
-    if (yr==2004) ly <- l2004
-    if (yr==2005) ly <- l2005
-    if (yr==2006) ly <- l2006
-    if (yr==2007) ly <- l2007
-    if (yr==2008) ly <- l2008
-    if (yr==2009) ly <- l2009
-    if (yr==2010) ly <- l2010
-    if (yr==2011) ly <- l2011
-    if (yr==2012) ly <- l2012
-    if (yr==2013) ly <- l2013
-    if (yr==2014) ly <- l2014
-    if (yr==2015) ly <- l2015
-    if (yr==2016) ly <- l2016
-    if (yr==2017) ly <- l2017
-    if (yr==2018) ly <- l2018
+    ly <- data.frame()
     # open raster layer
     pth <- paste(rd, "raster/", edo, "/l", yr, ".tif", sep="") # archivo de luminosidad
     #r <- raster("Harmonized_DN_NTL_2014_simVIIRS.tif") # filenames 2014-
@@ -112,12 +82,16 @@ calc.yr <- function(yr){
     l.work <- l
     # fill row-by-row
     for (i in 1:length(ses)){
-        #i <- 691 # debug
-        if (edon==7 & ses[i] %in% 2042:2048){
+        #i <- 318 # debug
+        if (
+          (edon==1  & ses[i] %in% c(318,603:607))  # secciones shapefiles appear to be corrupted
+        | (edon==7  & ses[i] %in%   2042:2048)
+        | (edon==16 & ses[i] %in% c(2080,2696:2703))
+        ){
             l.work$note[i] <- "shapefile corrupted"
-            next # secciones 2042:4 shapefiles appear to be corrupted
+            next
         }
-        message(sprintf("%s pct of %s-%s: i=%s sección %s", round(i*100/length(ses),0), edo, yr, i, ses[i]))
+        message(sprintf("%spct of %s-%s: i=%s sección %s", round(i*100/length(ses),0), edo, yr, i, ses[i]))
         one.se <- subset(se.map, se.map@data$id==ses[i])
         #plot(one.se, main=paste("sección", ses[i]))
         # clip raster to seccion
@@ -138,13 +112,13 @@ calc.yr <- function(yr){
     return(ly)
 }
 
-for (i in c(1993:1996, 1998, 1999, 2001, 2002, 2004, 2005, 2007, 2008, 2010, 2011, 2013, 2014, 2016, 2017)){
+for (i in 1992:2018){
     yr <- i
     ly <- calc.yr(yr=yr)
     ly <- ly[order(ly$seccion),] # sort
     ly$ord <- NULL # drop plotting order
-    #tail(ly)
-    pth <- paste(rd, "data/", edo, "/lum", yr, ".csv", sep="") # archivo de luminosidad
+    tail(ly)
+    pth <- paste(rd, "data/secciones/", edo, "/lum", yr, ".csv", sep="") # archivo de luminosidad
     write.csv(ly, file = pth, row.names=FALSE)
 }
 
