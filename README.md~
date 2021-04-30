@@ -1,7 +1,7 @@
 
 # Table of Contents
 
-1.  [Description of *Surface night lights in Mexico at analytical units* repository](#orga60d8ed)
+1.  [Description of *Surface night lights in Mexico at analytical units* repository](#org9cc7460)
 
 ---
 
@@ -12,7 +12,7 @@ Last revision: 2021-04-29
 ---
 
 
-<a id="orga60d8ed"></a>
+<a id="org9cc7460"></a>
 
 # Description of *Surface night lights in Mexico at analytical units* repository
 
@@ -22,9 +22,9 @@ Last revision: 2021-04-29
 
 The repository contains nighttime luminosity data for Mexico, aggregated at the municipal (\(N \approx 2,500\)) and *sección electoral* levels (\(N \approx 67,000\)). Luminosity rasters are from [Li, Zhou, Zhao and Zhao](https://www.nature.com/articles/s41597-020-0510-y)'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018. 
 
-The source reports annual geo-coded observations at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels across each unit's territory, reporting unit mean luminosity, the median, and the standard deviation. The source averages (and harmonizes) pixel luminosity in time. This repo averages pixels in space. 
+The source reports annual observations geo-coded at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels within each unit's territory, reporting the mean unit luminosity, the median, and the standard deviation. While the source averages (and harmonizes) pixel luminosity in time, this repo averages pixels in space. The units chosen have analytical potential, as they can be associated with census indicators, electoral returns, and so forth.
 
-An example from one unit clarifies. The unit in question is sección number 573 in Mexicali, the capital city of the state of Baja California. Figure [9](#orgd2eb52d) shows the source's statewide data. Tijuana's luminosity can be appreciated in the Northwest tip of the state, Ensenada.
+An example from one unit clarifies the summary statistics distributed. The unit in question is *sección* number 573 in Mexicali, the capital city of the state of Baja California. Figure [9](#orgc57657f) shows the source's statewide data. Tijuana's luminosity can be appreciated in the Northwest tip of the state, Ensenada.
 
 ![img](./pics/bc.png "Baja California's statewide nighttime lights for 2018")
 
