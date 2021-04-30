@@ -1,22 +1,22 @@
 
 # Table of Contents
 
-1.  [Description of *Surface night lights in Mexico at analytical units* repository](#org331d1eb)
-2.  [Acknowledgements](#org39b9a84)
-3.  [References](#org53abbe1)
+1.  [Description of *Nighttime luminosity in Mexico at analytical units* repository](#org46c73e4)
+2.  [Acknowledgements](#org28900d1)
+3.  [References](#orgccaa7f6)
 
 ---
 
 Last revision: 2021-04-30
 
-**New data** `data/municipios/` and `data/secciones/` distribute luminosity measures for the states of Baja California, Chiapas, and Michoacán. Stay tuned, other states will be added soon &#x2014; I need to debug these first. Comments, critiques, and suggestions welcome by email.  
+**New data** `data/municipios/` and `data/secciones/` distribute luminosity measures for the states of Baja California, Chiapas, Michoacán, and Veracruz. Stay tuned, more states to be added soon &#x2014; I need to debug these first. Comments, critiques, and suggestions welcome by email.  
 
 ---
 
 
-<a id="org331d1eb"></a>
+<a id="org46c73e4"></a>
 
-# Description of *Surface night lights in Mexico at analytical units* repository
+# Description of *Nighttime luminosity in Mexico at analytical units* repository
 
 -   Author: Eric Magar
 -   Location <https://github.com/emagar/luminosity>
@@ -26,11 +26,11 @@ The repository contains nighttime luminosity data for Mexico, aggregated at the 
 
 The source reports annual observations geo-coded at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels within each unit's territory, reporting the mean unit luminosity, the median, and the standard deviation. While the source averages (and harmonizes) pixel luminosity in time, this repo averages pixels in space. The units chosen have analytical potential, as they can be associated with census indicators, electoral returns, and so forth.
 
-An example from one unit clarifies the summary statistics distributed. The unit in question is *sección* number 573 in Mexicali, the capital city of the state of Baja California. The following map shows the source's statewide data. Tijuana's luminosity can be appreciated in the Northwest tip of the state, Ensenada's slightly southward, and Mexicali's in the Northeast. The small red area is *sección* 573, in the city's suburbs towards the Colorado river delta. (*Secciones* are Mexico's basic units for electoral organization and cartography, analogous to U.S. census tracts.) 
+An example from one unit clarifies the summary statistics distributed. The unit in question is *sección* number 573 in Mexicali, the capital city of the state of Baja California. The following map shows the source's statewide data. Tijuana's luminosity can be appreciated in the northwestern tip of the state, Ensenada's slightly southward, and Mexicali's in the northeast. The small red area is *sección* 573, in the city's suburbs, towards the Colorado river delta. (*Secciones* are Mexico's basic units for electoral management and cartography, analogous to U.S. census tracts.) 
 
 ![img](./pics/bc.png "Baja California's statewide nighttime lights for 2018")
 
-The next map zooms into the unit, portraying luminosity in sección 573 and vincinity. (Shapefiles for secciones electorales and municipal boundaries are from [INE's cartography department](https://cartografia.ife.org.mx/sige7/?cartografia=mapas).) Artificial lights in 2018 decreased near monotonically as one progressed towards the *sección*'s WSW. I relied on `R`'s `raster` package ([Hijmans 2019](https://cran.r-project.org/web/packages/raster/index.html)) in order to summarize the unit's luminosity.
+The next map zooms into the unit, portraying luminosity in sección 573 and vincinity. (Shapefiles for secciones electorales and municipal boundaries are from [INE's cartography department](https://cartografia.ife.org.mx/sige7/?cartografia=mapas).) Artificial lights in 2018 decreased near monotonically as one progressed towards the *sección*'s east-southeast. I relied on `R`'s `raster` package ([Hijmans 2019](https://cran.r-project.org/web/packages/raster/index.html)) in order to summarize the unit's luminosity.
 
 ![img](./pics/bc-100-crop.png "Luminosity around the chosen sección")
 
@@ -43,14 +43,14 @@ The time series can be appreciated in the final figure below. The *sección*'s r
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org39b9a84"></a>
+<a id="org28900d1"></a>
 
 # Acknowledgements
 
-Eric Magar acknowledges financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
+Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="org53abbe1"></a>
+<a id="orgccaa7f6"></a>
 
 # References
 
