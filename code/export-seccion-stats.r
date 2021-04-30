@@ -79,15 +79,18 @@ calc.yr <- function(yr){
     r <- mask(r, ed.map)         # approximate poligon only
     r[is.na(r)] <- 0 # make NAs zeroes
     ## # verify
-    ## plot(r)
-    ## plot(ed.map, add = TRUE, lwd = .2)
-    ## plot(se.map, add = TRUE, lwd = .1)
+## #    png(file = "../pics/bc.png")
+##     par(mar=c(.5,.5,2,1)) ## SETS B L U R MARGIN SIZES
+##     plot(r, axes = FALSE, main = edo)
+##     plot(ed.map, add = TRUE, lwd = .2)
+## #    plot(se.map, add = TRUE, lwd = .1)
+#    dev.off()
     #
     # copy master data.frame
     l.work <- l
     # fill row-by-row
     for (i in 1:length(ses)){
-        #i <- 673 # debug
+        i <- 100 # debug
         ## if (
         ##   (edon==1  & ses[i] %in% c(318,603:607))  # secciones shapefiles appear to be corrupted
         ## | (edon==7  & ses[i] %in%   2042:2048)
@@ -104,9 +107,10 @@ calc.yr <- function(yr){
         #plot(r.se, main=paste("sección", ses[i]))
         r.se <- mask(r.se, one.se)         # approximate poligon
         ## # verify
-        ## plot(one.se)
-        ## plot(r.se, add = TRUE)
-        ## plot(one.se, add = TRUE, lwd = .2)
+        par(mar=c(.5,.5,2,4)) ## SETS B L U R MARGIN SIZES
+        plot(one.se, main=paste("sección", ses[i]))
+        plot(r.se, add = TRUE)
+        plot(one.se, add = TRUE, lwd = .5)
         #
         v <- unlist(extract(r, one.se)) # get values inside poligon
         l.work$mean  [i] <- round(mean  (v),2)
@@ -119,7 +123,7 @@ calc.yr <- function(yr){
 
 
 i <- 1992
-for (i in 1992:2018){
+for (i in 1993:2018){
     yr <- i
     ly <- calc.yr(yr=yr)
     ly <- ly[order(ly$seccion),] # sort
@@ -185,7 +189,8 @@ calc.yr.mu <- function(yr){
     return(ly)
 }
 
-for (i in 1992:2018){
+i <- 1992
+for (i in 1993:2018){
     yr <- i
     ly <- calc.yr.mu(yr=yr)
     ly <- ly[order(ly$munn),] # sort

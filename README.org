@@ -21,6 +21,9 @@ The repository contains nighttime luminosity data for Mexico, aggregated at the 
 
 The source reports annual geo-coded observations at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels across each unit's territory, reporting unit mean luminosity, the median, and the standard deviation. The source averages (and harmonizes) pixel luminosity in time. This repo averages pixels in space. 
 
-Here one example. 
+An example from one unit clarifies. The unit in question is sección number 573 in Mexicali, the capital city of the state of Baja California. Figure 1 shows the source's statewide data. Tijuana's luminosity can be appreciated in the Northwest tip of the state, Ensenada.
+
+#+NAME: fig1
+[[./pics/bc.png]]
 
 
