@@ -35,7 +35,7 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
 
-edon <- 16; edo <- edos[edon]
+edon <- 2; edo <- edos[edon]
 
 # state's borders
 tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
