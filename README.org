@@ -14,19 +14,13 @@ Last revision: 2021-04-29
 
 * Description of /Surface night lights in Mexico at analytical units/ repository
 - Author: Eric Magar
-- Location https://github.com/emagar/lunimosity
+- Location https://github.com/emagar/luminosity
 - Email: emagar at itam dot mx
 
 The repository contains nighttime luminosity data for Mexico, aggregated at the municipal ($N \approx 2,500$) and /sección electoral/ levels ($N \approx 67,000$). Luminosity rasters are from [[https://www.nature.com/articles/s41597-020-0510-y][Li, Zhou, Zhao and Zhao]]'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018. 
 
-The source reports annual geo-coded observations at a spatial resolution of about one square kilometer (30 arc seconds). The units in this repository report the territory's mean, median, and standard deviation of annual average 
+The source reports annual geo-coded observations at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels across each unit's territory, reporting unit mean luminosity, the median, and the standard deviation. The source averages (and harmonizes) pixel luminosity in time. This repo averages pixels in space. 
 
-voting data for recent Mexican elections for certain offices at different levels of aggregation. Data has been compiled from many sources. More recent years tend to be coded from official vote returns. Earlier elections tend to be from secondary sources (see Souces section). Data inludes district-level federal deputy vote returns since 1979 and district-level presidential vote returns since 2006; and municipality-level municipal president vote returns (except in the state of Nayarit, votes cast for municipal president also elect a municipal council in a fused ballot). 
-
-* Files in the repository and how to cite them
+Here one example. 
 
 
-
-
-# luminosity
-Nighttime lights in Mexican states 1992-2018

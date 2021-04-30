@@ -35,7 +35,7 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
 
-edon <- 7; edo <- edos[edon]
+edon <- 16; edo <- edos[edon]
 
 # state's borders
 tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
@@ -117,8 +117,9 @@ calc.yr <- function(yr){
     return(ly)
 }
 
+
 i <- 1992
-for (i in 1993:2018){
+for (i in 1992:2018){
     yr <- i
     ly <- calc.yr(yr=yr)
     ly <- ly[order(ly$seccion),] # sort
@@ -139,7 +140,6 @@ calc.yr.mu <- function(yr){
     ly <- data.frame()
     # open raster layer
     pth <- paste(rd, "raster/", edo, "/l", yr, ".tif", sep="") # archivo de luminosidad
-    #r <- raster("Harmonized_DN_NTL_2014_simVIIRS.tif") # filenames 2014-
     r <- raster(pth) # filenames 1992-2013
     # projects to a different datum with long and lat
     r <- projectRaster(r, crs=osm()) # project to osm native Mercator
