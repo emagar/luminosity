@@ -1,7 +1,7 @@
 
 # Table of Contents
 
-1.  [Description of *Surface night lights in Mexico at analytical units* repository](#orge3c27fb)
+1.  [Description of *Surface night lights in Mexico at analytical units* repository](#orga60d8ed)
 
 ---
 
@@ -12,7 +12,7 @@ Last revision: 2021-04-29
 ---
 
 
-<a id="orge3c27fb"></a>
+<a id="orga60d8ed"></a>
 
 # Description of *Surface night lights in Mexico at analytical units* repository
 
@@ -24,7 +24,7 @@ The repository contains nighttime luminosity data for Mexico, aggregated at the 
 
 The source reports annual geo-coded observations at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels across each unit's territory, reporting unit mean luminosity, the median, and the standard deviation. The source averages (and harmonizes) pixel luminosity in time. This repo averages pixels in space. 
 
-An example from one unit clarifies. The unit in question is sección number 573 in Mexicali, the capital city of the state of Baja California. Figure 1 shows the source's statewide data. Tijuana's luminosity can be appreciated in the Northwest tip of the state, Ensenada.
+An example from one unit clarifies. The unit in question is sección number 573 in Mexicali, the capital city of the state of Baja California. Figure [9](#orgd2eb52d) shows the source's statewide data. Tijuana's luminosity can be appreciated in the Northwest tip of the state, Ensenada.
 
-![img](./pics/bc.png)
+![img](./pics/bc.png "Baja California's statewide nighttime lights for 2018")
 
