@@ -35,19 +35,25 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
 
-edon <- 16; edo <- edos[edon]
+edon <- 7; edo <- edos[edon]
 
 # state's borders
 tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
-# tmp <- paste(md, "ags", sep = "") # archivo con mapas rojano
 tmp <- readOGR(dsn = tmp, layer = 'ENTIDAD')
 # projects to a different datum with long and lat
 tmp <- spTransform(tmp, osm())
 ed.map <- tmp
 #
+# state's municipios
+tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
+mu.map <- readOGR(dsn = tmp, layer = 'MUNICIPIO')
+summary(mu.map)
+# projects to a different datum with long and lat
+mu.map <- spTransform(mu.map, osm()) # project to osm native Mercator
+#plot(mu.map)
+#
 # state's secciones
 tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
-#tmp <- paste(md, edo, sep = "") # archivo con mapas rojano
 se.map <- readOGR(dsn = tmp, layer = 'SECCION')
 summary(se.map)
 # projects to a different datum with long and lat
@@ -66,7 +72,6 @@ calc.yr <- function(yr){
     ly <- data.frame()
     # open raster layer
     pth <- paste(rd, "raster/", edo, "/l", yr, ".tif", sep="") # archivo de luminosidad
-    #r <- raster("Harmonized_DN_NTL_2014_simVIIRS.tif") # filenames 2014-
     r <- raster(pth) # filenames 1992-2013
     # projects to a different datum with long and lat
     r <- projectRaster(r, crs=osm()) # project to osm native Mercator
@@ -82,17 +87,17 @@ calc.yr <- function(yr){
     l.work <- l
     # fill row-by-row
     for (i in 1:length(ses)){
-        #i <- 318 # debug
-        if (
-          (edon==1  & ses[i] %in% c(318,603:607))  # secciones shapefiles appear to be corrupted
-        | (edon==7  & ses[i] %in%   2042:2048)
-        | (edon==16 & ses[i] %in% c(2080,2696:2703))
-        ){
-            l.work$note[i] <- "shapefile corrupted"
-            next
-        }
+        #i <- 673 # debug
+        ## if (
+        ##   (edon==1  & ses[i] %in% c(318,603:607))  # secciones shapefiles appear to be corrupted
+        ## | (edon==7  & ses[i] %in%   2042:2048)
+        ## | (edon==16 & ses[i] %in% c(2080,2696:2703))
+        ## ){
+        ##     l.work$note[i] <- "shapefile corrupted"
+        ##     next
+        ## }
         message(sprintf("%spct of %s-%s: i=%s sección %s", round(i*100/length(ses),0), edo, yr, i, ses[i]))
-        one.se <- subset(se.map, se.map@data$id==ses[i])
+        one.se <- subset(se.map, se.map@data$seccion==ses[i])
         #plot(one.se, main=paste("sección", ses[i]))
         # clip raster to seccion
         r.se <- crop(r, extent(one.se)) # crop to plot area
@@ -112,13 +117,81 @@ calc.yr <- function(yr){
     return(ly)
 }
 
-for (i in 1992:2018){
+i <- 1992
+for (i in 1993:2018){
     yr <- i
     ly <- calc.yr(yr=yr)
     ly <- ly[order(ly$seccion),] # sort
     ly$ord <- NULL # drop plotting order
     tail(ly)
     pth <- paste(rd, "data/secciones/", edo, "/lum", yr, ".csv", sep="") # archivo de luminosidad
+    write.csv(ly, file = pth, row.names=FALSE)
+}
+
+# l will receive state/year's stats, then will be rbound to year's dataframe ly
+dat.mu <- mu.map@data
+dat.mu$ord <- 1:nrow(dat.mu)
+l <- data.frame(ord = dat.mu$ord, edon = dat.mu$entidad, munn = dat.mu$municipio, mun = dat.mu$nombre); l$median <- l$sd <- l$mean <- NA; l$note <- ""
+mus <- l$munn
+
+calc.yr.mu <- function(yr){
+    #yr <- 2000 # debug
+    ly <- data.frame()
+    # open raster layer
+    pth <- paste(rd, "raster/", edo, "/l", yr, ".tif", sep="") # archivo de luminosidad
+    #r <- raster("Harmonized_DN_NTL_2014_simVIIRS.tif") # filenames 2014-
+    r <- raster(pth) # filenames 1992-2013
+    # projects to a different datum with long and lat
+    r <- projectRaster(r, crs=osm()) # project to osm native Mercator
+    # clip raster to state
+    r <- mask(r, ed.map)         # approximate poligon only
+    r[is.na(r)] <- 0 # make NAs zeroes
+    ## # verify
+    ## plot(r)
+    ## plot(ed.map, add = TRUE, lwd = .2)
+    ## plot(se.map, add = TRUE, lwd = .1)
+    #
+    # copy master data.frame
+    l.work <- l
+    # fill row-by-row
+    for (i in 1:length(mus)){
+        #i <- 1 # debug
+        ## if (
+        ##   (edon==1  & ses[i] %in% c(318,603:607))  # secciones shapefiles appear to be corrupted
+        ## | (edon==7  & ses[i] %in%   2042:2048)
+        ## | (edon==16 & ses[i] %in% c(2080,2696:2703))
+        ## ){
+        ##     l.work$note[i] <- "shapefile corrupted"
+        ##     next
+        ## }
+        message(sprintf("%spct of %s-%s: i=%s mun %s", round(i*100/length(mus),0), edo, yr, i, mus[i]))
+        one.mu <- subset(mu.map, mu.map@data$municipio==mus[i])
+        #plot(one.se, main=paste("sección", ses[i]))
+        # clip raster to seccion
+        r.mu <- crop(r, extent(one.mu)) # crop to plot area
+        #plot(r.se, main=paste("sección", ses[i]))
+        r.mu <- mask(r.mu, one.mu)         # approximate poligon
+        ## # verify
+        ## plot(one.mu)
+        ## plot(r.mu, add = TRUE)
+        ## plot(one.mu, add = TRUE, lwd = .2)
+        #
+        v <- unlist(extract(r, one.mu)) # get values inside poligon
+        l.work$mean  [i] <- round(mean  (v),2)
+        l.work$sd    [i] <- round(sd    (v),2)
+        l.work$median[i] <- round(median(v),2)
+    }
+    ly <- rbind(ly, l.work)
+    return(ly)
+}
+
+for (i in 1992:2018){
+    yr <- i
+    ly <- calc.yr.mu(yr=yr)
+    ly <- ly[order(ly$munn),] # sort
+    ly$ord <- NULL # drop plotting order
+    tail(ly)
+    pth <- paste(rd, "data/municipios/", edo, "/lum", yr, ".csv", sep="") # archivo de luminosidad
     write.csv(ly, file = pth, row.names=FALSE)
 }
 
