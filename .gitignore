@@ -1,6 +1,9 @@
 # ignore worldwide rasters
 Harmonized_DN_NTL_*.tif
 
+# backup files
+*.*~
+
 # History files
 .Rhistory
 .Rapp.history
