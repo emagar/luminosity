@@ -107,10 +107,10 @@ calc.yr <- function(yr){
         #plot(r.se, main=paste("sección", ses[i]))
         r.se <- mask(r.se, one.se)         # approximate poligon
         ## # verify
-        par(mar=c(.5,.5,2,4)) ## SETS B L U R MARGIN SIZES
-        plot(one.se, main=paste("sección", ses[i]))
-        plot(r.se, add = TRUE)
-        plot(one.se, add = TRUE, lwd = .5)
+        ## par(mar=c(.5,.5,2,4)) ## SETS B L U R MARGIN SIZES
+        ## plot(one.se, main=paste("sección", ses[i]))
+        ## plot(r.se, add = TRUE)
+        ## plot(one.se, add = TRUE, lwd = .5)
         #
         v <- unlist(extract(r, one.se)) # get values inside poligon
         l.work$mean  [i] <- round(mean  (v),2)

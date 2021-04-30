@@ -3,7 +3,7 @@
 ## script may require running parts of export-seccion-stats.r ##
 ################################################################
 
-cuts <- seq(0,40,5)
+cuts <- seq(0,50,5)
 edon <- 2; edo <- "bc"
 
 i <- 100
@@ -35,6 +35,7 @@ dev.off()
         png(file = "../pics/bc-100-crop.png")
         par(mar=c(.5,.5,2,4)) ## SETS B L U R MARGIN SIZES
         plot(one.se, main=paste("sección", ses[i], "(Mexicali)"))
+        #plot(r.se, breaks=cuts, col = topo.colors(5), add = TRUE)
         plot(r.se, breaks=cuts, col = topo.colors(10), add = TRUE)
         plot(one.se, add = TRUE, lwd = 1)
         dev.off()
@@ -86,4 +87,9 @@ for (i in 1994:2018){
         plot(one.se, add = TRUE, lwd = .5)
 }
 dev.off()
+
+
+citation("raster")
+
+
 
