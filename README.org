@@ -1,22 +1,22 @@
-#+TITLE: Nighttime luminosity in Mexico at analytical units
+#+TITLE: Nighttime lights in Mexico at analytical units
 #+AUTHOR: Eric Magar
 
 ----------
 
 Last revision: 2021-04-30
 
-*New data* ~data/municipios/~ and ~data/secciones/~ distribute luminosity measures for the states of Baja California, Chiapas, Michoacán, and Veracruz. Stay tuned, more states to be added soon --- I need to debug these first. Comments, critiques, and suggestions welcome by email.  
+*New data* ~data/municipios/~ and ~data/secciones/~ distribute luminosity measures for the states of Baja California, Chiapas, Michoacán, Oaxaca, and Veracruz. Stay tuned, more states to be added soon --- I need to debug these first. Comments, critiques, and suggestions welcome by email.  
 
 ----------
 
 # Export to md: M-x org-md-export-to-markdown
 
-* Description of /Nighttime luminosity in Mexico at analytical units/ repository
+* Description of /Nighttime lights in Mexico at analytical units/ repository
 - Author: Eric Magar
 - Location https://github.com/emagar/luminosity
 - Email: emagar at itam dot mx
 
-The repository contains nighttime luminosity data for Mexico, aggregated at the municipal ($N \approx 2,500$) and /sección electoral/ levels ($N \approx 67,000$). Luminosity rasters are from [[https://www.nature.com/articles/s41597-020-0510-y][Li, Zhou, Zhao and Zhao]]'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018. 
+The repository distributes nighttime luminosity data for Mexico, aggregated at the municipal ($N \approx 2,500$) and /sección electoral/ levels ($N \approx 67,000$). Luminosity rasters are from [[https://www.nature.com/articles/s41597-020-0510-y][Li, Zhou, Zhao and Zhao]]'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018. 
 
 The source reports annual observations geo-coded at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels within each unit's territory, reporting the mean unit luminosity, the median, and the standard deviation. While the source averages (and harmonizes) pixel luminosity in time, this repo averages pixels in space. The units chosen have analytical potential, as they can be associated with census indicators, electoral returns, and so forth.
 
