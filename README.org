@@ -3,9 +3,9 @@
 
 ----------
 
-Last revision: 2021-04-30
+Last revision: 2021-05-02
 
-*New data* ~data/municipios/~ and ~data/secciones/~ distribute luminosity measures for the states of Baja California, Chiapas, Michoacán, Oaxaca, and Veracruz. Stay tuned, more states to be added soon --- I need to debug these first. Comments, critiques, and suggestions welcome by email.  
+*New data* ~data/municipios/~ and ~data/secciones/~ distribute luminosity measures for the states of Baja California, Baja California Sur, Chiapas, Michoacán, Oaxaca, and Veracruz. Stay tuned, more states to be added soon --- I need to debug these first. Comments, critiques, and suggestions welcome by email.  
 
 ----------
 
