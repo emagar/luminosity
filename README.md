@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org75718d8)
-2.  [Acknowledgements](#orga05e239)
-3.  [References](#org60440ce)
+1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org45f52f2)
+2.  [Acknowledgements](#org07d1dd3)
+3.  [References](#org02f706b)
 
 ---
 
 Last revision: 2021-05-05
 
-**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for 19 states: Aguascalientes, the Baja Californias, Colima, Chiapas, Mexico City, Jalisco, the State of México, Michoacán, Nuevo León, Oaxaca, San Luis, Sinaloa, Sonora, Tamaulipas, Tlaxcala, Veracruz, Yucatán, and Zacatecas. Stay tuned, more states to be added soon &#x2014; I need to debug these first. Comments, critiques, and suggestions welcome by email.  
+**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for 20 states (of 32): Aguascalientes, the Baja Californias, Colima, Chiapas, Mexico City, Jalisco, the State of México, Michoacán, Nayarit, Nuevo León, Oaxaca, San Luis, Sinaloa, Sonora, Tamaulipas, Tlaxcala, Veracruz, Yucatán, and Zacatecas. Stay tuned, more states to be added soon &#x2014; I need to debug these first. Comments, critiques, and suggestions welcome by email.  
 
 ---
 
 
-<a id="org75718d8"></a>
+<a id="org45f52f2"></a>
 
 # Description of *Nighttime lights in Mexico at analytical units* repository
 
@@ -30,30 +30,30 @@ An example from one unit clarifies the summary statistics distributed. The unit 
 
 ![img](./pics/bc.png "Baja California's statewide nighttime lights for 2018")
 
-The next map zooms into the unit, portraying luminosity in sección 573 and vincinity. (Shapefiles for secciones electorales and municipal boundaries are from [INE's cartography department](https://cartografia.ife.org.mx/sige7/?cartografia=mapas).) Artificial lights in 2018 decreased near monotonically as one progressed towards the *sección*'s east-southeast. I relied on `R`'s `raster` package ([Hijmans 2019](https://cran.r-project.org/web/packages/raster/index.html)) in order to summarize the unit's luminosity.
+The map below zooms into the unit, portraying luminosity in *sección* 573 and vincinity. (Shapefiles for *secciones electorales* and municipal boundaries are from [INE's cartography department](https://cartografia.ife.org.mx/sige7/?cartografia=mapas).) Artificial lights in the year 2018 portrayed decreased near monotonically as one progressed towards the *sección*'s east-southeast. I relied on `R`'s `raster` package ([Hijmans 2019](https://cran.r-project.org/web/packages/raster/index.html)) in order to summarize the unit's luminosity.
 
 ![img](./pics/bc-100-crop.png "Luminosity around the chosen sección")
 
-The following map illustrates the process of summarizing (the code is in script `code/export-seccion-stats.r`). The `raster::mask` operation selects pixels within the *sección*'s polygon, excluding the rest (which appear in white in the map). Descriptive stats for the selected pixels are computed and reported in annual state-by-state files in csv format in `data/secciones`. 
+The next map illustrates descriptive statistics generation (the code for this process is in script `code/export-seccion-stats.r`). `R`'s `raster::mask` operation selects pixels inside the *sección*'s polygon, excluding the rest (which appear in white in the map). The mean luminosity, median, and standard deviation for the selected pixels are reported in annual state-by-state files in csv format in folder `data/secciones`. 
 
 ![img](./pics/bc-100-mask.png "Nighttime lights inside sección 573")
 
-The time series can be appreciated in the final figure below. The *sección*'s rapid urbanization is notable. The aggregated nighttime lightning data offers a valuable indicator of human activity in Mexico's municipalities and electoral secciones since the 1990s. 
+The time series can be appreciated in the final figure below. The *sección*'s rapid urbanization is notable. Most of the area was quite dark in the mid-1990s, with mean nighttime lights of roughly 8GW per pixel, tripling by 2018.  The nighttime lightning aggregated in territorial units data offers a valuable indicator of human activity in Mexico's municipalities and electoral secciones since the 1990s. 
 
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orga05e239"></a>
+<a id="org07d1dd3"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="org60440ce"></a>
+<a id="org02f706b"></a>
 
 # References
 
--   Hijmans, Robert J. 2019. raster: Geographic Data Analysis and Modeling ver 3.0-2,  <https://CRAN.R-project.org/package=raster>.
+-   Hijmans, Robert J. 2019. `raster`: Geographic Data Analysis and Modeling ver 3.0-2,  <https://CRAN.R-project.org/package=raster>.
 -   Li, Xuecao, Yuyu Zhou, Min Zhao, and Xia Zhao. 2020. A harmonized global nighttime light dataset 1992–2018. *Scientific Data* 7(1), <https://doi.org/10.1038/s41597-020-0510-y>.
 
