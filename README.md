@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#orgfcce3ad)
-2.  [Acknowledgements](#org6612374)
-3.  [References](#orgef3d898)
+1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org5c294ad)
+2.  [Acknowledgements](#orgda3e2f7)
+3.  [References](#orgae9ea8b)
 
 ---
 
-Last revision: 2021-05-05
+Last revision: 2021-05-06
 
-**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for 23 states (of 32): Aguascalientes, the Baja Californias, Campeche, Coahuila, Colima, Chiapas, Chihuahua, Mexico City, Jalisco, the State of México, Michoacán, Nayarit, Nuevo León, Oaxaca, San Luis, Sinaloa, Sonora, Tamaulipas, Tlaxcala, Veracruz, Yucatán, and Zacatecas. Stay tuned, more states to be added soon &#x2014; I need to debug these first. Comments, critiques, and suggestions welcome by email.  
+**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Stay tuned, debugging and data validation will now take place. Comments, critiques, and suggestions welcome by email.  
 
 ---
 
 
-<a id="orgfcce3ad"></a>
+<a id="org5c294ad"></a>
 
 # Description of *Nighttime lights in Mexico at analytical units* repository
 
@@ -43,14 +43,14 @@ The time series can be appreciated in the final figure below. The *sección*'s r
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org6612374"></a>
+<a id="orgda3e2f7"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="orgef3d898"></a>
+<a id="orgae9ea8b"></a>
 
 # References
 
