@@ -5,7 +5,7 @@
 
 Last revision: 2021-05-05
 
-*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for 21 states (of 32): Aguascalientes, the Baja Californias, Campeche, Colima, Chiapas, Mexico City, Jalisco, the State of México, Michoacán, Nayarit, Nuevo León, Oaxaca, San Luis, Sinaloa, Sonora, Tamaulipas, Tlaxcala, Veracruz, Yucatán, and Zacatecas. Stay tuned, more states to be added soon --- I need to debug these first. Comments, critiques, and suggestions welcome by email.  
+*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for 22 states (of 32): Aguascalientes, the Baja Californias, Campeche, Coahuila, Colima, Chiapas, Mexico City, Jalisco, the State of México, Michoacán, Nayarit, Nuevo León, Oaxaca, San Luis, Sinaloa, Sonora, Tamaulipas, Tlaxcala, Veracruz, Yucatán, and Zacatecas. Stay tuned, more states to be added soon --- I need to debug these first. Comments, critiques, and suggestions welcome by email.  
 
 ----------
 
