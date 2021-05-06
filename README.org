@@ -5,7 +5,7 @@
 
 Last revision: 2021-05-06
 
-*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Stay tuned, debugging and data validation will now take place. Comments, critiques, and suggestions welcome by email.  
+*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Stay tuned, debugging and data validation are ongoing. Comments, critiques, and suggestions welcome by email.  
 
 ----------
 
