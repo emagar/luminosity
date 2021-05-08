@@ -91,7 +91,6 @@ library(maptools)
 library(rgdal)
 #gpclibPermit()
 
-getwd()
 rd <- c("~/Dropbox/data/mapas/luminosity/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
@@ -131,7 +130,7 @@ r[is.na(r)] <- 0 # make NAs zeroes
     # verify
 #    png(file = "../pics/bc.png")
 par(mar=c(.5,.5,2,1)) ## SETS B L U R MARGIN SIZES
-plot(ed.map, lwd = 1)
+plot(r, lwd = 1)
 plot(r, axes = FALSE, main = edo)
 plot(ed.map, add = TRUE, lwd = 1)
 #    plot(se.map, add = TRUE, lwd = .1)

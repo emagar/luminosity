@@ -35,8 +35,8 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
 # select state to process
-edon <- 9; edo <- edos[edon]
-print(paste("Will process", edo, "stats"))
+edon <- 2; edo <- edos[edon]
+print(paste("Will process", toupper(edo), "stats"))
 
 # state's borders
 tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
@@ -150,7 +150,7 @@ calc.yr.mu <- function(yr){
     r <- projectRaster(r, crs=osm()) # project to osm native Mercator
     # clip raster to state
     r <- mask(r, ed.map)         # approximate poligon only
-    r[is.na(r)] <- 0 # make NAs zeroes
+#drop    r[is.na(r)] <- 0 # make NAs zeroes
     ## # verify
     ## plot(r)
     ## plot(ed.map, add = TRUE, lwd = .2)

@@ -3,6 +3,7 @@ Harmonized_DN_NTL_*.tif
 
 # backup files
 *.*~
+\#*.*\#
 
 # History files
 .Rhistory
