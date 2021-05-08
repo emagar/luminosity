@@ -3,9 +3,10 @@
 ## script may require running parts of export-seccion-stats.r ##
 ################################################################
 
-cuts <- seq(0,50,5)
-edon <- 2; edo <- "bc"
+cuts <- seq(0,65,5)
+colr <- topo.colors((length(cuts)-1))
 
+i <- which(se.map@data$seccion==4559)
 i <- 100
 one.se <- subset(se.map, se.map@data$seccion==ses[i])
 
@@ -18,13 +19,13 @@ r <- projectRaster(r, crs=osm()) # project to osm native Mercator
 r <- mask(r, ed.map)         # approximate poligon only
 r[is.na(r)] <- 0 # make NAs zeroes
 ## # verify
-png(file = "../pics/bc.png")
+#png(file = "../pics/bc.png")
 par(mar=c(.5,.5,2,1)) ## SETS B L U R MARGIN SIZES
 plot(r, axes = FALSE, main = edo)
 plot(ed.map, add = TRUE, lwd = .2)
 plot(one.se, add = TRUE, lwd = .5, col = "red")
 #plot(se.map, add = TRUE, lwd = .1)
-dev.off()
+#dev.off()
 
 
 # plot crop
@@ -32,13 +33,13 @@ dev.off()
         # clip raster to seccion
         r.se <- crop(r, extent(one.se)) # crop to plot area
         ## # verify
-        png(file = "../pics/bc-100-crop.png")
+#        png(file = "../pics/bc-100-crop.png")
         par(mar=c(.5,.5,2,4)) ## SETS B L U R MARGIN SIZES
         plot(one.se, main=paste("sección", ses[i], "(Mexicali)"))
         #plot(r.se, breaks=cuts, col = topo.colors(5), add = TRUE)
-        plot(r.se, breaks=cuts, col = topo.colors(10), add = TRUE)
+        plot(r.se, breaks=cuts, col = colr, add = TRUE)
         plot(one.se, add = TRUE, lwd = 1)
-        dev.off()
+#        dev.off()
 
 # plot mask
         # clip raster to seccion
@@ -51,12 +52,12 @@ dev.off()
         tmp.sd     <- round(sd    (v),2)
         tmp.median <- round(median(v),2)
         ## # verify
-        png(file = "../pics/bc-100-mask.png")
+#        png(file = "../pics/bc-100-mask.png")
         par(mar=c(.5,.5,2.5,4)) ## SETS B L U R MARGIN SIZES
         plot(one.se, main=paste("sección", ses[i], "\nmedian =", tmp.median, "mean=", tmp.mean, "sd =", tmp.sd))
-        plot(r.se, breaks=cuts, col = topo.colors(10), add = TRUE)
+        plot(r.se, breaks=cuts, col = colr, add = TRUE)
         plot(one.se, add = TRUE, lwd = .5)
-        dev.off()
+#        dev.off()
 
 # plot 1994-2018
 png(file = "../pics/bc-100-mask-1994-2018.png")
