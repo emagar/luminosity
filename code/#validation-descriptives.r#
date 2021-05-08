@@ -1,12 +1,79 @@
 ###########################################################################################
 ## Nighttime light in Mexican states at analytical units                                 ##
 ##                                                                                       ##
-## Code to export municipal- and sección electoral-level statistics using INE's polygons ##
-## (see https://github.com/emagar/luminosity for details)                                ##
+## Code to debug, validate, describe municipal- and sección electoral-level statistics   ##
 ##                                                                                       ##
-## Prepared by Eric Magar 30apr2021                                                      ##
+## Prepared by Eric Magar 6may2021                                                       ##
 ## emagar at itam dot mx                                                                 ##
 ###########################################################################################
+
+library(DataCombine) # easy lags with slide
+
+rm(list = ls())
+
+edos <- c("ags", "bc", "bcs", "cam", "coa", "col", "cps", "cua", "df", "dgo", "gua", "gue", "hgo", "jal", "mex", "mic", "mor", "nay", "nl", "oax", "pue", "que", "qui", "san", "sin", "son", "tab", "tam", "tla", "ver", "yuc", "zac")
+estados <- c("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Coahuila", "Colima", "Chiapas", "Chihuahua", "Ciudad de México", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Micchoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas")
+
+# select state to process
+edon <- 9; edo <- edos[edon]; estado <- estados[edon]; print(paste("Will describe", toupper(estado), "stats"))
+
+dd <- c(paste0("~/Dropbox/data/mapas/luminosity/data/secciones/", edo, "/"))
+setwd(dd)
+
+# read state data into data.frames
+yr <- 1992
+tmp <- read.csv(file = paste0("lum", yr, ".csv"), stringsAsFactors = FALSE)
+tmp$sd[is.na(tmp$sd)] <- 0 # missing sd due to single pixel, should be zero
+#
+l.mean   <- tmp; l.mean$median <- l.mean$sd <- l.mean$note <- NULL; colnames(l.mean)[3] <- "y1992"
+l.median <- tmp; l.median$mean <- l.median$sd <- l.median$note <- NULL; colnames(l.median)[3] <- "y1992"
+l.sd     <- tmp; l.sd$mean <- l.sd$median <- l.sd$note <- NULL; colnames(l.sd)[3] <- "y1992"
+
+for (yr in 1993:2018){
+    #yr <- 1993 # debug
+    tmp <- read.csv(file = paste0("lum", yr, ".csv"), stringsAsFactors = FALSE)
+    tmp$sd[is.na(tmp$sd)] <- 0 # missing sd due to single pixel, should be zero
+    # plug yr's stats into relevant data.frame
+    l.mean <- cbind(l.mean, tmp$mean); colnames(l.mean)[ncol(l.mean)] <- paste0("y", yr)
+    l.median <- cbind(l.median, tmp$median); colnames(l.median)[ncol(l.median)] <- paste0("y", yr)
+    l.sd <- cbind(l.sd, tmp$sd); colnames(l.sd)[ncol(l.sd)] <- paste0("y", yr)
+}
+
+# first differences and relative change
+l.dif0 <- l.mean[,-c(1,2)] # drop edon seccion
+l.dif1 <- l.dif0[,-1]; l.dif1 <- cbind(l.dif1, y2019=rep(NA,nrow(l.dif0)))
+l.rel1 <- round((l.dif1 - l.dif0) / (l.dif0 + .001), 3) # +.001 to avoid indeterminacy when base is zero 
+l.dif1 <- l.dif1 - l.dif0 #  1st difference
+l.dif1$y2019 <- l.rel1$y2019 <- NULL # drop last year indetermined
+rm(l.dif0) # clean
+l.dif1 <- cbind(l.mean[,c(1,2)], l.dif1) # add edon seccion again
+l.rel1 <- cbind(l.mean[,c(1,2)], l.rel1) # add edon seccion again
+head(l.dif1)
+head(l.rel1)
+
+# 1992 = 100
+l.rel0 <- l.mean
+#l.rel0[,-c(1:2)] <- l.rel0[,-c(1:2)] + 0.001 # smallest measure>0 is 0.01, add 0.001 to avoid indeterminacy
+l.rel0[,-c(1:2)] <- l.rel0[,-c(1:2)] + 100 # largest measure is 63, sliding up to 100 should work
+l.rel0[,-c(1:2)] <- l.rel0[,-c(1:2)] *100 / l.rel0[,3]
+
+
+# plot y1992 = 100
+clr <- rgb(190, 190, 190, maxColorValue = 255, alpha = 50)
+plot(x=1992:2018,l.rel0[1,-1:-2],ylim=c(50,160),type="n", axes=FALSE,
+     main = paste0(estado, ", secciones electorales"), ylab = "Relative luminosity (1992 = 100)", xlab = "")
+axis(1, at = seq(1992,2018,1), labels = FALSE)
+axis(1, at = c(1992,seq(1995,2015,5),2018))
+axis(2)
+for (i in 1:nrow(l.rel0)) lines(x=1992:2018,l.rel0[i,-1:-2],col=clr,lwd=0.33)
+abline(h=100,col="red")
+
+# select some outliers
+sel <- which(l.rel0$y2009<65)
+sel <- l.rel0$seccion[sel]
+
+
+# 1107819448674 # folio cancelacion izzi 6may2021
 
 ## # OJO: when using spTranform in script, use line below for google earth, or next line for OSM/google maps
 #x.map <- spTransform(x.map, CRS("+proj=longlat +datum=WGS84"))
@@ -15,7 +82,6 @@
 # to use osm backgrounds
 library(rJava)
 library(OpenStreetMap)
-library(rgdal)
 library(raster)
 
 # geospatial data 
@@ -25,18 +91,8 @@ library(maptools)
 library(rgdal)
 #gpclibPermit()
 
-
-rm(list = ls())
-
-edos <- c("ags", "bc", "bcs", "cam", "coa", "col", "cps", "cua", "df", "dgo", "gua", "gue", "hgo", "jal", "mex", "mic", "mor", "nay", "nl", "oax", "pue", "que", "qui", "san", "sin", "son", "tab", "tam", "tla", "ver", "yuc", "zac")
-
 rd <- c("~/Dropbox/data/mapas/luminosity/")
-#md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/loc/maps/0code/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
-
-# select state to process
-edon <- 9; edo <- edos[edon]
-print(paste("Will process", edo, "stats"))
 
 # state's borders
 tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
@@ -64,43 +120,23 @@ se.map <- spTransform(se.map, osm()) # project to osm native Mercator
 dat <- se.map@data
 dat$ord <- 1:nrow(dat)
 
-# l will receive state/year's stats, then will be rbound to year's dataframe ly
-l <- data.frame(ord = dat$ord, edon = dat$entidad, seccion = dat$seccion); l$median <- l$sd <- l$mean <- NA; l$note <- ""
-ses <- l$seccion
-
-calc.yr <- function(yr){
-    #yr <- 2000 # debug
-    ly <- data.frame()
-    # open raster layer
-    pth <- paste(rd, "raster/", edo, "/l", yr, ".tif", sep="") # archivo de luminosidad
-    r <- raster(pth) # filenames 1992-2013
+pth <- paste(rd, "raster/", edo, "/l", yr, ".tif", sep="") # archivo de luminosidad
+r <- raster(pth) # filenames 1992-2013
     # projects to a different datum with long and lat
-    r <- projectRaster(r, crs=osm()) # project to osm native Mercator
+r <- projectRaster(r, crs=osm()) # project to osm native Mercator
     # clip raster to state
-    r <- mask(r, ed.map)         # approximate poligon only
-#drop maybe    r[is.na(r)] <- 0 # make NAs zeroes
-    ## # verify
-## #    png(file = "../pics/bc.png")
-##     par(mar=c(.5,.5,2,1)) ## SETS B L U R MARGIN SIZES
-##     plot(r, axes = FALSE, main = edo)
-##     plot(ed.map, add = TRUE, lwd = .2)
-## #    plot(se.map, add = TRUE, lwd = .1)
+r <- mask(r, ed.map)         # approximate poligon only
+r[is.na(r)] <- 0 # make NAs zeroes
+    # verify
+#    png(file = "../pics/bc.png")
+par(mar=c(.5,.5,2,1)) ## SETS B L U R MARGIN SIZES
+plot(r, lwd = 1)
+plot(r, axes = FALSE, main = edo)
+plot(ed.map, add = TRUE, lwd = 1)
+#    plot(se.map, add = TRUE, lwd = .1)
+plot(se.map[which(dat$seccion %in% sel),], add = TRUE, lwd = 1, col = "red")
 #    dev.off()
     #
-    # copy master data.frame
-    l.work <- l
-    # fill row-by-row
-    for (i in 1:length(ses)){
-        #i <- 100 # debug
-        ## if (
-        ##   (edon==1  & ses[i] %in% c(318,603:607))  # secciones shapefiles appear to be corrupted
-        ## | (edon==7  & ses[i] %in%   2042:2048)
-        ## | (edon==16 & ses[i] %in% c(2080,2696:2703))
-        ## ){
-        ##     l.work$note[i] <- "shapefile corrupted"
-        ##     next
-        ## }
-        message(sprintf("%spct of %s-%s: i=%s sección %s", round(i*100/length(ses),0), edo, yr, i, ses[i]))
         one.se <- subset(se.map, se.map@data$seccion==ses[i])
         #plot(one.se, main=paste("sección", ses[i]))
         # clip raster to seccion

@@ -68,11 +68,9 @@ axis(2)
 for (i in 1:nrow(l.rel0)) lines(x=1992:2018,l.rel0[i,-1:-2],col=clr,lwd=0.33)
 abline(h=100,col="red")
 
-# 
+# select some outliers
 sel <- which(l.rel0$y2009<65)
 sel <- l.rel0$seccion[sel]
-x
-
 
 
 # 1107819448674 # folio cancelacion izzi 6may2021
@@ -122,7 +120,6 @@ se.map <- spTransform(se.map, osm()) # project to osm native Mercator
 # prepare data.frame to receive luminosity seccion-level stats
 dat <- se.map@data
 dat$ord <- 1:nrow(dat)
-
 
 pth <- paste(rd, "raster/", edo, "/l", yr, ".tif", sep="") # archivo de luminosidad
 r <- raster(pth) # filenames 1992-2013
