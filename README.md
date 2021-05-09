@@ -1,26 +1,28 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org8b8dd2c)
-2.  [Acknowledgements](#orge5f158f)
-3.  [References](#org8581f47)
+1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org9d339c6)
+2.  [Acknowledgements](#orgf78bd7a)
+3.  [Donate](#orga412658)
+4.  [References](#orgf84131f)
 
 ---
 
-Last revision: 2021-05-06
+Last revision: 2021-05-08
 
-**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Stay tuned, debugging and data validation are ongoing. Comments, critiques, and suggestions welcome by email.  
+**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation returned a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed for the ten first states in alphabetical order. Rest to be fixed in the next few dayss. Comments, critiques, and suggestions welcome by email.  
 
 ---
 
 
-<a id="org8b8dd2c"></a>
+<a id="org9d339c6"></a>
 
 # Description of *Nighttime lights in Mexico at analytical units* repository
 
 -   Author: Eric Magar
 -   Location <https://github.com/emagar/luminosity>
 -   Email: emagar at itam dot mx
+-   Citation for the data forthcoming
 
 The repository distributes nighttime luminosity data for Mexico, aggregated at the municipal (N approx. 2,500) and *sección electoral* levels (N approx. 67,000). Luminosity rasters are from [Li, Zhou, Zhao and Zhao](https://www.nature.com/articles/s41597-020-0510-y)'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018. 
 
@@ -43,14 +45,24 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orge5f158f"></a>
+<a id="orgf78bd7a"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="org8581f47"></a>
+<a id="orga412658"></a>
+
+# Donate
+
+If you find this useful, help buy a cup of coffee for the author and research assistants. [[<https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD>][
+
+![img](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png "Donate with PayPal")
+]
+
+
+<a id="orgf84131f"></a>
 
 # References
 

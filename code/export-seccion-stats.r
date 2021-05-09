@@ -34,7 +34,7 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 #md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/loc/maps/0code/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
-for (e in c(1,3:5)){
+for (e in c(6:8,10:11)){
 
 # select state to process
 edon <- e; edo <- edos[edon]
@@ -203,3 +203,4 @@ for (i in 1992:2018){
     write.csv(ly, file = pth, row.names=FALSE)
 }
 }
+

@@ -3,9 +3,9 @@
 
 ----------
 
-Last revision: 2021-05-06
+Last revision: 2021-05-08
 
-*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Stay tuned, debugging and data validation are ongoing. Comments, critiques, and suggestions welcome by email.  
+*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Validation returned a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed for the ten first states in alphabetical order. Rest to be fixed in the next few dayss. Comments, critiques, and suggestions welcome by email.  
 
 ----------
 
@@ -15,6 +15,7 @@ Last revision: 2021-05-06
 - Author: Eric Magar
 - Location https://github.com/emagar/luminosity
 - Email: emagar at itam dot mx
+- Citation for the data forthcoming
 
 The repository distributes nighttime luminosity data for Mexico, aggregated at the municipal (N approx. 2,500) and /sección electoral/ levels (N approx. 67,000). Luminosity rasters are from [[https://www.nature.com/articles/s41597-020-0510-y][Li, Zhou, Zhao and Zhao]]'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018. 
 
@@ -45,6 +46,11 @@ The time series can be appreciated in the final figure below. The sección's rap
 * Acknowledgements
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
+* Donate
+If you find this useful, help buy a cup of coffee for the author and research assistants. [[https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD][
+#+CAPTION: Donate with PayPal
+[[https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png]]
+]
 * References
 - Hijmans, Robert J. 2019. ~raster~: Geographic Data Analysis and Modeling ver 3.0-2,  https://CRAN.R-project.org/package=raster. 
 - Li, Xuecao, Yuyu Zhou, Min Zhao, and Xia Zhao. 2020. A harmonized global nighttime light dataset 1992–2018. /Scientific Data/ 7(1), https://doi.org/10.1038/s41597-020-0510-y. 
