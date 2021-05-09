@@ -50,6 +50,7 @@ Eric Magar is grateful for financial support from the Asociación Mexicana de Cu
 If you find this useful, help buy a cup of coffee for the author and research assistants. [[https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD][Donate with PayPal]]
 
 #+HTML: Literal HTML code for export 
+
 #+BEGIN_EXPORT html
 <form action="https://www.paypal.com/donate" method="post" target="_top">
 <input type="hidden" name="business" value="FQDMH76GZC8WQ" />
