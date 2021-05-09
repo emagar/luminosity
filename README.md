@@ -1,10 +1,10 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org1575c3e)
-2.  [Acknowledgements](#orgc51ab66)
-3.  [Donate](#orgcafbb04)
-4.  [References](#org7913d3a)
+1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org3e37103)
+2.  [Acknowledgements](#org854a12c)
+3.  [Donate](#org7717ec1)
+4.  [References](#orgc6c20fb)
 
 ---
 
@@ -15,7 +15,7 @@ Last revision: 2021-05-08
 ---
 
 
-<a id="org1575c3e"></a>
+<a id="org3e37103"></a>
 
 # Description of *Nighttime lights in Mexico at analytical units* repository
 
@@ -45,14 +45,14 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orgc51ab66"></a>
+<a id="org854a12c"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="orgcafbb04"></a>
+<a id="org7717ec1"></a>
 
 # Donate
 
@@ -61,7 +61,7 @@ If you find this useful, help buy a cup of coffee for the author and research as
 ![img](./pics/QRcode-paypal.png)
 
 
-<a id="org7913d3a"></a>
+<a id="orgc6c20fb"></a>
 
 # References
 
