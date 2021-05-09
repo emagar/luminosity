@@ -47,11 +47,9 @@ The time series can be appreciated in the final figure below. The sección's rap
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 * Donate
-If you find this useful, help buy a cup of coffee for the author and research assistants. [[https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD][Donate with PayPal]]
+If you find this useful, help buy a cup of coffee for the author and research assistants. [[https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD][https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif]]
 
-[[https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif]]
 
-[[https://www.paypal.com/en_MX/i/scr/pixel.gif]]
 
 # #+HTML: Literal HTML code for export 
 # #+BEGIN_EXPORT html
