@@ -50,7 +50,7 @@ Eric Magar is grateful for financial support from the Asociación Mexicana de Cu
 If you find this useful, help buy a cup of coffee for the author and research assistants. [[https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD][
 #+CAPTION: Donate with PayPal
 [[https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png]]
-]
+]]
 * References
 - Hijmans, Robert J. 2019. ~raster~: Geographic Data Analysis and Modeling ver 3.0-2,  https://CRAN.R-project.org/package=raster. 
 - Li, Xuecao, Yuyu Zhou, Min Zhao, and Xia Zhao. 2020. A harmonized global nighttime light dataset 1992–2018. /Scientific Data/ 7(1), https://doi.org/10.1038/s41597-020-0510-y. 
