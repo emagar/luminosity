@@ -1,10 +1,10 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#orge7c2c50)
-2.  [Acknowledgements](#org052957b)
-3.  [Donate](#orgdcd0701)
-4.  [References](#org02afb32)
+1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#orgecdca24)
+2.  [Acknowledgements](#org434ae37)
+3.  [Donate](#org64bfcef)
+4.  [References](#org9638bd8)
 
 ---
 
@@ -15,7 +15,7 @@ Last revision: 2021-05-08
 ---
 
 
-<a id="orge7c2c50"></a>
+<a id="orgecdca24"></a>
 
 # Description of *Nighttime lights in Mexico at analytical units* repository
 
@@ -45,24 +45,22 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org052957b"></a>
+<a id="org434ae37"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="orgdcd0701"></a>
+<a id="org64bfcef"></a>
 
 # Donate
 
-If you find this useful, help buy a cup of coffee for the author and research assistants. [[<https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD>][
-
-![img](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png "Donate with PayPal")
-]]
+If you find this useful, help buy a cup of coffee for the author and research assistants. [Donate with PayPal](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD)
+![img](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)
 
 
-<a id="org02afb32"></a>
+<a id="org9638bd8"></a>
 
 # References
 
