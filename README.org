@@ -49,18 +49,19 @@ Eric Magar is grateful for financial support from the Asociación Mexicana de Cu
 * Donate
 If you find this useful, help buy a cup of coffee for the author and research assistants. [[https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD][Donate with PayPal]]
 
-#+HTML: Literal HTML code for export 
+[[https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif]]
 
-#+BEGIN_EXPORT html
-<form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="business" value="FQDMH76GZC8WQ" />
-<input type="hidden" name="currency_code" value="USD" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
-</form>
-#+END_EXPORT
+[[https://www.paypal.com/en_MX/i/scr/pixel.gif]]
 
-
+# #+HTML: Literal HTML code for export 
+# #+BEGIN_EXPORT html
+# <form action="https://www.paypal.com/donate" method="post" target="_top">
+# <input type="hidden" name="business" value="FQDMH76GZC8WQ" />
+# <input type="hidden" name="currency_code" value="USD" />
+# <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+# <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+# </form>
+# #+END_EXPORT
 * References
 - Hijmans, Robert J. 2019. ~raster~: Geographic Data Analysis and Modeling ver 3.0-2,  https://CRAN.R-project.org/package=raster. 
 - Li, Xuecao, Yuyu Zhou, Min Zhao, and Xia Zhao. 2020. A harmonized global nighttime light dataset 1992–2018. /Scientific Data/ 7(1), https://doi.org/10.1038/s41597-020-0510-y. 
