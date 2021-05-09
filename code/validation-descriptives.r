@@ -15,7 +15,7 @@ edos <- c("ags", "bc", "bcs", "cam", "coa", "col", "cps", "cua", "df", "dgo", "g
 estados <- c("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Coahuila", "Colima", "Chiapas", "Chihuahua", "Ciudad de México", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Micchoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas")
 
 # select state to process
-edon <- 9; edo <- edos[edon]; estado <- estados[edon]; print(paste("Will describe", toupper(estado), "stats"))
+edon <- 2; edo <- edos[edon]; estado <- estados[edon]; print(paste("Will describe", toupper(estado), "stats"))
 
 dd <- c(paste0("~/Dropbox/data/mapas/luminosity/data/secciones/", edo, "/"))
 setwd(dd)

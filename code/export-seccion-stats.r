@@ -34,8 +34,10 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 #md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/loc/maps/0code/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
+for (e in c(1,3:5)){
+
 # select state to process
-edon <- 2; edo <- edos[edon]
+edon <- e; edo <- edos[edon]
 print(paste("Will process", toupper(edo), "stats"))
 
 # state's borders
@@ -200,4 +202,4 @@ for (i in 1992:2018){
     pth <- paste(rd, "data/municipios/", edo, "/lum", yr, ".csv", sep="") # archivo de luminosidad
     write.csv(ly, file = pth, row.names=FALSE)
 }
-
+}
