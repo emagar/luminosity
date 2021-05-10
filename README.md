@@ -1,21 +1,21 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#orgb76b696)
-2.  [Acknowledgements](#org3f82e5b)
-3.  [Donate](#org9306538)
-4.  [References](#orge2973aa)
+1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#orga949fb6)
+2.  [Acknowledgements](#orge4ff087)
+3.  [Donate](#org1b0ae7c)
+4.  [References](#org56ce91c)
 
 ---
 
 Last revision: 2021-05-08
 
-**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed for the first twenty-seven states in alphabetical order. Rest to be fixed in the next few days. Comments, critiques, and suggestions welcome by email.  
+**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed for the first thirty states in alphabetical order. Rest to be fixed in the next few days. Comments, critiques, and suggestions welcome by email.  
 
 ---
 
 
-<a id="orgb76b696"></a>
+<a id="orga949fb6"></a>
 
 # Description of *Nighttime lights in Mexico at analytical units* repository
 
@@ -45,21 +45,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org3f82e5b"></a>
+<a id="orge4ff087"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="org9306538"></a>
+<a id="org1b0ae7c"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="orge2973aa"></a>
+<a id="org56ce91c"></a>
 
 # References
 
