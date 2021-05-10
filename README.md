@@ -1,21 +1,21 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgd3566c3)
-2.  [Acknowledgements](#orgec5dd81)
-3.  [Donate](#orge9e90e7)
-4.  [References](#org9641a95)
+1.  [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org35311cb)
+2.  [Acknowledgements](#org697981f)
+3.  [Donate](#org89e546d)
+4.  [References](#org449cba2)
 
 ---
 
-Last revision: 2021-05-08
+Last revision: 2021-05-10
 
-**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed, new data no longer has this problem. Comments, critiques, and suggestions welcome by email.  
+**News:** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (e.g. secciones in urban areas), producing large but short-lived surges/declines in luminosity measure. Bug has been fixed, new data no longer has this problem. Comments, critiques, and suggestions welcome by email.  
 
 ---
 
 
-<a id="orgd3566c3"></a>
+<a id="org35311cb"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -45,21 +45,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orgec5dd81"></a>
+<a id="org697981f"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="orge9e90e7"></a>
+<a id="org89e546d"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="org9641a95"></a>
+<a id="org449cba2"></a>
 
 # References
 

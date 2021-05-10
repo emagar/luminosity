@@ -3,9 +3,9 @@
 
 ----------
 
-Last revision: 2021-05-08
+Last revision: 2021-05-10
 
-*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed, new data no longer has this problem. Comments, critiques, and suggestions welcome by email.  
+*News:* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (e.g. secciones in urban areas), producing large but short-lived surges/declines in luminosity measure. Bug has been fixed, new data no longer has this problem. Comments, critiques, and suggestions welcome by email.  
 
 ----------
 
