@@ -34,7 +34,7 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 #md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/loc/maps/0code/")
 md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
 
-for (e in c(12:14)){
+for (e in c(21:22)){
 
 # select state to process
 edon <- e; edo <- edos[edon]

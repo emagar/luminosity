@@ -1,21 +1,21 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org3e37103)
-2.  [Acknowledgements](#org854a12c)
-3.  [Donate](#org7717ec1)
-4.  [References](#orgc6c20fb)
+1.  [Description of *Nighttime lights in Mexico at analytical units* repository](#org107bd85)
+2.  [Acknowledgements](#orgd8f5573)
+3.  [Donate](#org9381375)
+4.  [References](#org7c6f613)
 
 ---
 
 Last revision: 2021-05-08
 
-**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation returned a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed for the ten first states in alphabetical order. Rest to be fixed in the next few dayss. Comments, critiques, and suggestions welcome by email.  
+**New data** `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation returned a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed for the first twenty-two states in alphabetical order. Rest to be fixed in the next few days. Comments, critiques, and suggestions welcome by email.  
 
 ---
 
 
-<a id="org3e37103"></a>
+<a id="org107bd85"></a>
 
 # Description of *Nighttime lights in Mexico at analytical units* repository
 
@@ -45,14 +45,14 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org854a12c"></a>
+<a id="orgd8f5573"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="org7717ec1"></a>
+<a id="org9381375"></a>
 
 # Donate
 
@@ -61,7 +61,7 @@ If you find this useful, help buy a cup of coffee for the author and research as
 ![img](./pics/QRcode-paypal.png)
 
 
-<a id="orgc6c20fb"></a>
+<a id="org7c6f613"></a>
 
 # References
 
