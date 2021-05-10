@@ -1,17 +1,17 @@
-#+TITLE: Nighttime lights in Mexico at analytical units
+#+TITLE: Nighttime lights in Mexico at units of substantive interest
 #+AUTHOR: Eric Magar
 
 ----------
 
 Last revision: 2021-05-08
 
-*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed for the first thirty states in alphabetical order. Rest to be fixed in the next few days. Comments, critiques, and suggestions welcome by email.  
+*New data* ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (eg. secciones in urban areas), inheriting substantive but short-lived surges/declines in luminosity measure. Bug has been fixed, new data no longer has this problem. Comments, critiques, and suggestions welcome by email.  
 
 ----------
 
 # Export to md: M-x org-md-export-to-markdown
 
-* Description of /Nighttime lights in Mexico at analytical units/ repository
+* Description of /Nighttime lights in Mexico at units of substantive interest/ repository
 - Author: Eric Magar
 - Location https://github.com/emagar/luminosity
 - Email: emagar at itam dot mx
