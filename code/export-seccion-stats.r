@@ -32,24 +32,27 @@ edos <- c("ags", "bc", "bcs", "cam", "coa", "col", "cps", "cua", "df", "dgo", "g
 
 rd <- c("~/Dropbox/data/mapas/luminosity/")
 #md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/loc/maps/0code/")
-md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")
+#md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")                 # uses 2017 maps
+md <- c("~/Dropbox/data/mapas/cartografia-2020/")                                                    # uses 2020 maps
 
-for (e in c(31)){
-e <- 32
+#for (e in c(31)){
+e <- 7
     
 # select state to process
 edon <- e; edo <- edos[edon]
 print(paste("Will process", toupper(edo), "stats"))
 
 # state's borders
-tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
-tmp <- readOGR(dsn = tmp, layer = 'ENTIDAD')
+#tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
+tmp <- paste(md, edo, sep = "")                         # archivo con mapas 2018
+ed.map <- readOGR(dsn = tmp, layer = 'ENTIDAD')
+summary(ed.map)
 # projects to a different datum with long and lat
-tmp <- spTransform(tmp, osm())
-ed.map <- tmp
+ed.map <- spTransform(ed.map, osm())
 #
 # state's municipios
-tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
+#tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
+tmp <- paste(md, edo, sep = "")                         # archivo con mapas 2018
 mu.map <- readOGR(dsn = tmp, layer = 'MUNICIPIO')
 summary(mu.map)
 # projects to a different datum with long and lat
@@ -57,7 +60,8 @@ mu.map <- spTransform(mu.map, osm()) # project to osm native Mercator
 #plot(mu.map)
 #
 # state's secciones
-tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
+#tmp <- paste(md, "fed/shp/disfed2018/", edo, sep = "") # archivo con mapas 2017
+tmp <- paste(md, edo, sep = "")                         # archivo con mapas 2018
 se.map <- readOGR(dsn = tmp, layer = 'SECCION')
 summary(se.map)
 # projects to a different datum with long and lat
@@ -127,7 +131,7 @@ calc.yr <- function(yr){
 
 
 i <- 1992
-for (i in 1992:2018){
+for (i in 1993:2018){
     yr <- i
     ly <- calc.yr(yr=yr)
     ly <- ly[order(ly$seccion),] # sort
@@ -203,5 +207,5 @@ for (i in 1992:2018){
     pth <- paste(rd, "data/municipios/", edo, "/lum", yr, ".csv", sep="") # archivo de luminosidad
     write.csv(ly, file = pth, row.names=FALSE)
 }
-}
+#}
 
