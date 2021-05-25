@@ -1,11 +1,11 @@
-###########################################################################################
-## Nighttime light in Mexican states at analytical units                                 ##
-##                                                                                       ##
-## Code to debug, validate, describe municipal- and sección electoral-level statistics   ##
-##                                                                                       ##
-## Prepared by Eric Magar 6may2021                                                       ##
-## emagar at itam dot mx                                                                 ##
-###########################################################################################
+############################################################################
+## Nighttime light in Mexican states at analytical units                  ##
+##                                                                        ##
+## Code to debug, validate, describe MUNICIPIO electoral-level statistics ##
+##                                                                        ##
+## Prepared by Eric Magar 6may2021                                        ##
+## emagar at itam dot mx                                                  ##
+############################################################################
 
 library(DataCombine) # easy lags with slide
 
@@ -15,9 +15,10 @@ edos <- c("ags", "bc", "bcs", "cam", "coa", "col", "cps", "cua", "df", "dgo", "g
 estados <- c("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Coahuila", "Colima", "Chiapas", "Chihuahua", "Ciudad de México", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Micchoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas")
 
 # select state to process
-edon <- 2; edo <- edos[edon]; estado <- estados[edon]; print(paste("Will describe", toupper(estado), "stats"))
+edon <- 1; edo <- edos[edon]; estado <- estados[edon]; print(paste("Will describe", toupper(estado), "stats"))
 
-dd <- c(paste0("~/Dropbox/data/mapas/luminosity/data/secciones/", edo, "/"))
+# municipios
+dd <- c(paste0("~/Dropbox/data/mapas/luminosity/data/municipios/", edo, "/")) # municipios
 setwd(dd)
 
 # read state data into data.frames
@@ -25,9 +26,9 @@ yr <- 1992
 tmp <- read.csv(file = paste0("lum", yr, ".csv"), stringsAsFactors = FALSE)
 tmp$sd[is.na(tmp$sd)] <- 0 # missing sd due to single pixel, should be zero
 #
-l.mean   <- tmp; l.mean$median <- l.mean$sd <- l.mean$note <- NULL; colnames(l.mean)[3] <- "y1992"
-l.median <- tmp; l.median$mean <- l.median$sd <- l.median$note <- NULL; colnames(l.median)[3] <- "y1992"
-l.sd     <- tmp; l.sd$mean <- l.sd$median <- l.sd$note <- NULL; colnames(l.sd)[3] <- "y1992"
+l.mean   <- tmp; l.mean$median <- l.mean$sd <- l.mean$note <- NULL; colnames(l.mean)[4] <- "y1992"
+l.median <- tmp; l.median$mean <- l.median$sd <- l.median$note <- NULL; colnames(l.median)[4] <- "y1992"
+l.sd     <- tmp; l.sd$mean <- l.sd$median <- l.sd$note <- NULL; colnames(l.sd)[4] <- "y1992"
 
 for (yr in 1993:2018){
     #yr <- 1993 # debug
@@ -40,37 +41,56 @@ for (yr in 1993:2018){
 }
 
 # first differences and relative change
-l.dif0 <- l.mean[,-c(1,2)] # drop edon seccion
+l.dif0 <- l.mean[,-c(1:3)] # drop edon seccion
 l.dif1 <- l.dif0[,-1]; l.dif1 <- cbind(l.dif1, y2019=rep(NA,nrow(l.dif0)))
 l.rel1 <- round((l.dif1 - l.dif0) / (l.dif0 + .001), 3) # +.001 to avoid indeterminacy when base is zero 
 l.dif1 <- l.dif1 - l.dif0 #  1st difference
 l.dif1$y2019 <- l.rel1$y2019 <- NULL # drop last year indetermined
 rm(l.dif0) # clean
-l.dif1 <- cbind(l.mean[,c(1,2)], l.dif1) # add edon seccion again
-l.rel1 <- cbind(l.mean[,c(1,2)], l.rel1) # add edon seccion again
+l.dif1 <- cbind(l.mean[,c(1:3)], l.dif1) # add edon seccion again
+l.rel1 <- cbind(l.mean[,c(1:3)], l.rel1) # add edon seccion again
 head(l.dif1)
 head(l.rel1)
 
 # 1992 = 100
 l.rel0 <- l.mean
-#l.rel0[,-c(1:2)] <- l.rel0[,-c(1:2)] + 0.001 # smallest measure>0 is 0.01, add 0.001 to avoid indeterminacy
-l.rel0[,-c(1:2)] <- l.rel0[,-c(1:2)] + 100 # largest measure is 63, sliding up to 100 should work
-l.rel0[,-c(1:2)] <- l.rel0[,-c(1:2)] *100 / l.rel0[,3]
+#l.rel0[,-c(1:3)] <- l.rel0[,-c(1:3)] + 0.001 # smallest measure>0 is 0.01, add 0.001 to avoid indeterminacy
+l.rel0[,-c(1:3)] <- l.rel0[,-c(1:3)] + 100 # largest measure is 63, sliding up to 100 should work
+l.rel0[,-c(1:3)] <- l.rel0[,-c(1:3)] *100 / l.rel0[,4]
 
 
 # plot y1992 = 100
 clr <- rgb(190, 190, 190, maxColorValue = 255, alpha = 50)
-plot(x=1992:2018,l.rel0[1,-1:-2],ylim=c(50,160),type="n", axes=FALSE,
-     main = paste0(estado, ", secciones electorales"), ylab = "Relative luminosity (1992 = 100)", xlab = "")
+plot(x=1992:2018,l.rel0[1,-1:-3],ylim=c(50,160),type="n", axes=FALSE,
+     main = paste0(estado, ", municipios"), ylab = "Relative luminosity (1992 = 100)", xlab = "")
 axis(1, at = seq(1992,2018,1), labels = FALSE)
 axis(1, at = c(1992,seq(1995,2015,5),2018))
 axis(2)
-for (i in 1:nrow(l.rel0)) lines(x=1992:2018,l.rel0[i,-1:-2],col=clr,lwd=0.33)
+for (i in 1:nrow(l.rel0)) lines(x=1992:2018,l.rel0[i,-1:-3],col=clr,lwd=1)
 abline(h=100,col="red")
 
-# select some outliers
-sel <- which(l.rel0$y2009<65)
-sel <- l.rel0$seccion[sel]
+# trend and plot it
+trend <- as.list(rep(NA, nrow(l.mean)))
+names(trend) <- l.mean$munn
+#
+for (i in 1:nrow(l.mean)){
+    dat    <- data.frame(x = c(1992:2018) - 1992) # start from 0,0
+    #dat    <- data.frame(x = 1992:2018)
+    dat$y <- t(l.rel0[i,-c(1:3)]) - 100
+    #dat$y <- t(l.rel0[i,-c(1:3)])
+    #dat$y <- t(l.mean[i,-c(1:3)])
+    trend[[i]] <- lm( y ~ x - 1, data = dat)
+}
+#
+clr <- rgb(190, 190, 190, maxColorValue = 255, alpha = 50)
+plot(x=1992:2018,l.rel0[1,-1:-3],ylim=c(50,160),type="n", axes=FALSE,
+     main = paste0(estado, ", municipios"), ylab = "Time trend in rel. luminosity (1992 = 100)", xlab = "")
+axis(1, at = seq(1992,2018,1), labels = FALSE)
+axis(1, at = c(1992,seq(1995,2015,5),2018))
+axis(2)
+for (i in 1:length(trend)) abline(a=summary(trend[[i]])$coefficients[1,1],col=clr,lwd=1)
+#for (i in 1:length(trend)) abline(trend[[i]],col=clr,lwd=1)
+abline(h=100,col="red")
 
 
 # 1107819448674 # folio cancelacion izzi 6may2021
