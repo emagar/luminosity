@@ -35,7 +35,7 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 #md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")                 # uses 2017 maps
 md <- c("~/Dropbox/data/mapas/cartografia-2020/")                                                    # uses 2020 maps
 
-for (e in 1:2){
+for (e in 16){
 #e <- 7
     
 # select state to process
