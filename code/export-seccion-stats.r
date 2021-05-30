@@ -35,9 +35,9 @@ rd <- c("~/Dropbox/data/mapas/luminosity/")
 #md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")                 # uses 2017 maps
 md <- c("~/Dropbox/data/mapas/cartografia-2020/")                                                    # uses 2020 maps
 
-for (e in 20:23){
-#e <- 7
-    
+for (e in 29){
+#e <- 13
+
 # select state to process
 edon <- e; edo <- edos[edon]
 print(paste("Will process", toupper(edo), "stats"))
@@ -131,7 +131,7 @@ calc.yr <- function(yr){
 
 
 i <- 1992
-for (i in 1993:2018){
+for (i in 1992:2018){
     yr <- i
     ly <- calc.yr(yr=yr)
     ly <- ly[order(ly$seccion),] # sort
