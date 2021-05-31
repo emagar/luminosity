@@ -1,25 +1,25 @@
 
 # Table of Contents
 
-1.  [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org9b66156)
-2.  [Acknowledgements](#orgb650b84)
-3.  [Donate](#org13e017f)
-4.  [References](#orgff06e81)
+1.  [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org7c10754)
+2.  [Acknowledgements](#org4ace167)
+3.  [Donate](#orgb815a09)
+4.  [References](#org59f5fa5)
 
 ---
 
-Last revision: 2021-05-25
+Last revision: 2021-05-30
 
 **News:** 
 
--   Measures are being re-computed using INE's 2020 maps (instead of 2017 maps). Data for Aguascalientes through Michoacán ready; rest forthcoming, **stay tuned**. Comments, critiques, and suggestions welcome by email.
+-   30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Comments, critiques, and suggestions welcome by email.
 
--   `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (e.g. secciones in urban areas), producing large but short-lived surges/declines in luminosity measure. Bug has been fixed, new data no longer has this problem.
+-   5may2021 `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (e.g. secciones in urban areas), producing large but short-lived surges/declines in luminosity measure. Bug has been fixed, new data no longer has this problem.
 
 ---
 
 
-<a id="org9b66156"></a>
+<a id="org7c10754"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -49,21 +49,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orgb650b84"></a>
+<a id="org4ace167"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
 
 
-<a id="org13e017f"></a>
+<a id="orgb815a09"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="orgff06e81"></a>
+<a id="org59f5fa5"></a>
 
 # References
 
