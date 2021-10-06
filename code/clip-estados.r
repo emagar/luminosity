@@ -15,7 +15,6 @@
 # to use osm backgrounds
 library(rJava)
 library(OpenStreetMap)
-library(rgdal)
 library(raster)
 
 rm(list = ls())

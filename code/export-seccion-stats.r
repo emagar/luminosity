@@ -1,7 +1,7 @@
 ###########################################################################################
 ## Nighttime light in Mexican states at analytical units                                 ##
 ##                                                                                       ##
-## Code to export municipal- and sección electoral-level statistics using INE's polygons ##
+## Code to export municipal- and electoral sección-level statistics using INE's polygons ##
 ## (see https://github.com/emagar/luminosity for details)                                ##
 ##                                                                                       ##
 ## Prepared by Eric Magar 30apr2021                                                      ##
@@ -21,19 +21,20 @@ library(raster)
 # geospatial data 
 #library(spdep);
 library(maptools)
-# used to determine what datum rojano data has
+# used to determine data's datum
 library(rgdal)
 #gpclibPermit()
 
 
 rm(list = ls())
 
+# my state abbrevs
 edos <- c("ags", "bc", "bcs", "cam", "coa", "col", "cps", "cua", "df", "dgo", "gua", "gue", "hgo", "jal", "mex", "mic", "mor", "nay", "nl", "oax", "pue", "que", "qui", "san", "sin", "son", "tab", "tam", "tla", "ver", "yuc", "zac")
 
 rd <- c("~/Dropbox/data/mapas/luminosity/")
 #md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/loc/maps/0code/")
-#md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")                 # uses 2017 maps
-md <- c("~/Dropbox/data/mapas/cartografia-2020/")                                                    # uses 2020 maps
+#md <- c("~/Dropbox/data/elecs/MXelsCalendGovt/redistrict/ife.ine/mapasComparados/")                 # uses 2017 INE maps
+md <- c("~/Dropbox/data/mapas/cartografia-2020/")                                                    # uses 2020 INE maps
 
 for (e in 29){
 #e <- 13
