@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orge85ee16)
-- [Work using night lights in social science](#org6c25370)
-- [Acknowledgements](#orgf2d0afb)
-- [Donate](#org9b79b1d)
-- [References](#orgf163747)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org5fb1217)
+- [Work using night lights in social science](#org72cf699)
+- [Acknowledgements](#org0482470)
+- [Donate](#org56b2426)
+- [References](#orgfab49f3)
 
 ---
 
@@ -17,7 +17,7 @@ Last revision: 2021-10-06
 ---
 
 
-<a id="orge85ee16"></a>
+<a id="org5fb1217"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -30,7 +30,7 @@ The repository distributes nighttime luminosity data for Mexico, aggregated at t
 
 The source reports annual observations geo-coded at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels within each unit's territory, reporting the mean unit luminosity, the median, and the standard deviation. While the source averages (and harmonizes) pixel luminosity in *time*, this repo averages pixels in *space*. The chosen units have analytical potential, as they can be associated with census indicators, with electoral returns, and so forth. (*Secciones electorales* are Mexico's basic units for electoral management and cartography, analogous to U.S. census tracts.)
 
-An example from one unit clarifies the summary statistics distributed. The unit in question is electoral sección number 573 in Mexicali, the capital city of the state of Baja California. The following map shows the source's statewide data. Tijuana's luminosity can be appreciated in the northwestern tip of the state, Ensenada's slightly southward, and Mexicali's in the northeast. The small red area is sección 573, in the city's suburbs, towards the Colorado river delta (the river marks the border with neighboring Sonora state).
+An example from one unit clarifies the summary statistics distributed. The unit in question is electoral sección number 573 in Mexicali, the capital city of the state of Baja California. The following map shows the source's statewide data. Tijuana's luminosity can be appreciated in the northwestern tip of the state, Ensenada's slightly southward, and Mexicali's eastward. The small red area is sección 573, in the city's suburbs, towards the Colorado river delta (the river marks the border with neighboring Sonora state).
 
 ![img](./pics/bc.png "Baja California's statewide nighttime lights for 2018")
 
@@ -47,7 +47,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org6c25370"></a>
+<a id="org72cf699"></a>
 
 # Work using night lights in social science
 
@@ -56,21 +56,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   How GDP is estimated [here](https://www.bea.gov/sites/default/files/methodologies/jep_spring2008.pdf).
 
 
-<a id="orgf2d0afb"></a>
+<a id="org0482470"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org9b79b1d"></a>
+<a id="org56b2426"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="orgf163747"></a>
+<a id="orgfab49f3"></a>
 
 # References
 
