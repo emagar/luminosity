@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org5fb1217)
-- [Work using night lights in social science](#org72cf699)
-- [Acknowledgements](#org0482470)
-- [Donate](#org56b2426)
-- [References](#orgfab49f3)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgc2af627)
+- [Work using night lights in social science](#org78e5663)
+- [Acknowledgements](#org62c3ce7)
+- [Donate](#orga407cd5)
+- [References](#orga64f3f1)
 
 ---
 
@@ -17,7 +17,7 @@ Last revision: 2021-10-06
 ---
 
 
-<a id="org5fb1217"></a>
+<a id="orgc2af627"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -47,30 +47,31 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org72cf699"></a>
+<a id="org78e5663"></a>
 
 # Work using night lights in social science
 
 -   A critical piece by Pinkowski and Sala-i-Martin [here](https://voxeu.org/article/gdp-measurement-accounts-surveys-and-lights)
 -   Livny 2021 [Can Religiosity Be Sensed with Satellite Data?](https://academic.oup.com/poq/article/85/S1/371/6361037)
+-   Bruederle and Hodler 2018 [Nighttime lights as a proxy for human development at the local level](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202231)
 -   How GDP is estimated [here](https://www.bea.gov/sites/default/files/methodologies/jep_spring2008.pdf).
 
 
-<a id="org0482470"></a>
+<a id="org62c3ce7"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org56b2426"></a>
+<a id="orga407cd5"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="orgfab49f3"></a>
+<a id="orga64f3f1"></a>
 
 # References
 
