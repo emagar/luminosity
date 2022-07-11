@@ -51,6 +51,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 - A critical piece by Pinkowski and Sala-i-Martin [[https://voxeu.org/article/gdp-measurement-accounts-surveys-and-lights][here]]
 - Livny 2021 [[https://academic.oup.com/poq/article/85/S1/371/6361037][Can Religiosity Be Sensed with Satellite Data?]]
 - Bruederle and Hodler 2018 [[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202231][Nighttime lights as a proxy for human development at the local level]]
+- Chen and Nordhaus 2011 [[https://www.pnas.org/doi/10.1073/pnas.1017031108][Using luminosity data as a proxy for economic statistics]]
 - How GDP is estimated [[https://www.bea.gov/sites/default/files/methodologies/jep_spring2008.pdf][here]].
 * Acknowledgements
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 
