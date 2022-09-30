@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org6762109)
-- [Social science using night lights](#org9a5aca7)
-- [Acknowledgements](#org018b989)
-- [Donate](#org536832f)
-- [References](#orgbdea53c)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgaad56e7)
+- [Social science using night lights](#org305d738)
+- [Acknowledgements](#org96bba8f)
+- [Donate](#orgc6155a5)
+- [References](#org2543e6d)
 
 ---
 
@@ -17,7 +17,7 @@ Last revision: 2021-10-06
 ---
 
 
-<a id="org6762109"></a>
+<a id="orgaad56e7"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -47,32 +47,32 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org9a5aca7"></a>
+<a id="org305d738"></a>
 
 # Social science using night lights
 
 -   Livny 2021 [Can Religiosity Be Sensed with Satellite Data?](https://academic.oup.com/poq/article/85/S1/371/6361037)
--   Bruederle and Hodler 2018 [Nighttime lights as a proxy for human development at the local level](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202231)
--   Chen and Nordhaus 2011 [Using luminosity data as a proxy for economic statistics](https://www.pnas.org/doi/10.1073/pnas.1017031108)
--   A critical piece by Pinkowski and Sala-i-Martin [here](https://voxeu.org/article/gdp-measurement-accounts-surveys-and-lights)
--   How GDP is estimated [here](https://www.bea.gov/sites/default/files/methodologies/jep_spring2008.pdf).
+-   Bruederle and Hodler 2018 [Nighttime lights as a proxy for human development at the local level](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202231).
+-   Chen and Nordhaus 2011 [Using luminosity data as a proxy for economic statistics](https://www.pnas.org/doi/10.1073/pnas.1017031108).
+-   A critical piece by Pinkowski and Sala-i-Martin [here](https://voxeu.org/article/gdp-measurement-accounts-surveys-and-lights).
+-   Growth reported relative to night lights by Martínez [here](https://bfi.uchicago.edu/insight/finding/how-much-should-we-trust-the-dictators-gdp-growth-estimates/).
 
 
-<a id="org018b989"></a>
+<a id="org96bba8f"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org536832f"></a>
+<a id="orgc6155a5"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="orgbdea53c"></a>
+<a id="org2543e6d"></a>
 
 # References
 
