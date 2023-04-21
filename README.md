@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org54ee843)
-- [Social science using night lights](#orgaca521e)
-- [Acknowledgements](#orgae486f0)
-- [Donate](#org08e8191)
-- [References](#orgfbd732e)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org84a84ca)
+- [Social science using night lights](#org4b1b2b0)
+- [Acknowledgements](#org77d9c5b)
+- [Donate](#org65f38a4)
+- [References](#org98e80e7)
 
 ---
 
@@ -17,14 +17,14 @@ Last revision: 2022-09-30
 ---
 
 
-<a id="org54ee843"></a>
+<a id="org84a84ca"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
 -   Author: Eric Magar
 -   Location <https://github.com/emagar/luminosity>
 -   Email: emagar at itam dot mx
--   Citation for the data forthcoming
+-   Citation for the data: see 'About' on the repository landing page
 
 The repository distributes nighttime luminosity data for Mexico, aggregated at the municipal (N approx. 2,500) and *sección electoral* levels (N approx. 67,000). Luminosity rasters are from [Li, Zhou, Zhao and Zhao](https://www.nature.com/articles/s41597-020-0510-y)'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018.
 
@@ -47,7 +47,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orgaca521e"></a>
+<a id="org4b1b2b0"></a>
 
 # Social science using night lights
 
@@ -58,21 +58,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   Growth reported relative to night lights by Martínez [here](https://bfi.uchicago.edu/insight/finding/how-much-should-we-trust-the-dictators-gdp-growth-estimates/).
 
 
-<a id="orgae486f0"></a>
+<a id="org77d9c5b"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org08e8191"></a>
+<a id="org65f38a4"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="orgfbd732e"></a>
+<a id="org98e80e7"></a>
 
 # References
 

@@ -19,7 +19,7 @@ Last revision: 2022-09-30
 - Author: Eric Magar
 - Location https://github.com/emagar/luminosity
 - Email: emagar at itam dot mx
-- Citation for the data forthcoming
+- Citation for the data: see 'About' on the repository landing page
 
 The repository distributes nighttime luminosity data for Mexico, aggregated at the municipal (N approx. 2,500) and /sección electoral/ levels (N approx. 67,000). Luminosity rasters are from [[https://www.nature.com/articles/s41597-020-0510-y][Li, Zhou, Zhao and Zhao]]'s (2020) Harmonized Global Nighttime Light Dataset 1992-2018. 
 
