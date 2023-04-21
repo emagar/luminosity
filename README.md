@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgf3dff6b)
-- [Social science using night lights](#org4c9ea6b)
-- [Acknowledgements](#orgae9a8db)
-- [Donate](#org9045dba)
-- [References](#org4a6148b)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org54ee843)
+- [Social science using night lights](#orgaca521e)
+- [Acknowledgements](#orgae486f0)
+- [Donate](#org08e8191)
+- [References](#orgfbd732e)
 
 ---
 
@@ -17,7 +17,7 @@ Last revision: 2022-09-30
 ---
 
 
-<a id="orgf3dff6b"></a>
+<a id="org54ee843"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -47,7 +47,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org4c9ea6b"></a>
+<a id="orgaca521e"></a>
 
 # Social science using night lights
 
@@ -58,21 +58,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   Growth reported relative to night lights by Martínez [here](https://bfi.uchicago.edu/insight/finding/how-much-should-we-trust-the-dictators-gdp-growth-estimates/).
 
 
-<a id="orgae9a8db"></a>
+<a id="orgae486f0"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org9045dba"></a>
+<a id="org08e8191"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="org4a6148b"></a>
+<a id="orgfbd732e"></a>
 
 # References
 

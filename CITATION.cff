@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Magar
+    given-names: Eric
+    orcid: https://orcid.org/0000-0002-6766-1677
+title: "Nighttime lights in Mexico at units of substantive interest"
+version: 2.0
+#doi: 10.5281/zenodo.1234
+date-released: 2021-05-30
+#last-revision: 2022-09-30
+url: "https://github.com/emagar/luminosity"
