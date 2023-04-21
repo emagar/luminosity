@@ -1,23 +1,23 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgaad56e7)
-- [Social science using night lights](#org305d738)
-- [Acknowledgements](#org96bba8f)
-- [Donate](#orgc6155a5)
-- [References](#org2543e6d)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgf3dff6b)
+- [Social science using night lights](#org4c9ea6b)
+- [Acknowledgements](#orgae9a8db)
+- [Donate](#org9045dba)
+- [References](#org4a6148b)
 
 ---
 
-Last revision: 2021-10-06
+Last revision: 2022-09-30
 
 **News:**
 
--   30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Comments, critiques, and suggestions welcome by email.
+-   30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Some over-populated secciones were split to create new units. Comments, critiques, and suggestions welcome by email.
 
 -   5may2021 `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (e.g. secciones in urban areas), producing large but short-lived surges/declines in luminosity measure. Bug has been fixed and data cleaned.
 
 ---
 
 
-<a id="orgaad56e7"></a>
+<a id="orgf3dff6b"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -30,7 +30,7 @@ The repository distributes nighttime luminosity data for Mexico, aggregated at t
 
 The source reports annual observations geo-coded at a spatial resolution of about one square kilometer (30 arc seconds). This repository summarizes pixels within each unit's territory, reporting the mean unit luminosity, the median, and the standard deviation. While the source averages (and harmonizes) pixel luminosity in *time*, this repo averages pixels in *space*. The chosen units have analytical potential, as they can be associated with census indicators, with electoral returns, and so forth. (*Secciones electorales* are Mexico's basic units for electoral management and cartography, analogous to U.S. census tracts.)
 
-An example from one unit clarifies the summary statistics distributed. The unit in question is electoral sección number 573 in Mexicali, the capital city of the state of Baja California. The following map shows the source's statewide data. Tijuana's luminosity can be appreciated in the northwestern tip of the state, Ensenada's slightly southward, and Mexicali's eastward. The small red area is sección 573, in the city's suburbs, towards the Colorado river delta (the river marks the border with neighboring Sonora state).
+An example from one unit clarifies the summary statistics distributed. The unit in question is electoral sección number 573 in Mexicali, the capital city of the state of Baja California. The following map shows the source's statewide data, shades of green indicating more nighttime luminosity, white less. Tijuana's brightness can be appreciated in the northwestern corner of the state, Ensenada's slightly southward, and Mexicali's eastward. The small red area is sección 573, in the city's suburbs, towards the Colorado river delta (the river is the border with neighboring state of Sonora).
 
 ![img](./pics/bc.png "Baja California's statewide nighttime lights for 2018")
 
@@ -47,7 +47,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org305d738"></a>
+<a id="org4c9ea6b"></a>
 
 # Social science using night lights
 
@@ -58,21 +58,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   Growth reported relative to night lights by Martínez [here](https://bfi.uchicago.edu/insight/finding/how-much-should-we-trust-the-dictators-gdp-growth-estimates/).
 
 
-<a id="org96bba8f"></a>
+<a id="orgae9a8db"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="orgc6155a5"></a>
+<a id="org9045dba"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="org2543e6d"></a>
+<a id="org4a6148b"></a>
 
 # References
 
