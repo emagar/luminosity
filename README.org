@@ -3,7 +3,7 @@
 
 ----------
 
-Last revision: 2022-09-30
+Last revision: 2023-12-30
 
 *News:* 
 
@@ -54,6 +54,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 - A critical piece by Pinkowski and Sala-i-Martin [[https://voxeu.org/article/gdp-measurement-accounts-surveys-and-lights][here]].
 - Growth reported relative to night lights by Martínez [[https://bfi.uchicago.edu/insight/finding/how-much-should-we-trust-the-dictators-gdp-growth-estimates/][here]].
 # - How GDP is estimated [[https://www.bea.gov/sites/default/files/methodologies/jep_spring2008.pdf][here]].
+- A Tweeter thread from Stanford AI Lab [[https://twitter.com/yohaniddawela/status/1741063302988390465][here]].
 
 * Acknowledgements
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data. 

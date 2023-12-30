@@ -1,12 +1,12 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org77e193f)
-- [Social science using night lights](#orgc15ebda)
-- [Acknowledgements](#org94d4c3c)
-- [Donate](#org99f4f10)
-- [References](#org0b38d38)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgc8203dc)
+- [Social science using night lights](#orgaab7582)
+- [Acknowledgements](#orgf689901)
+- [Donate](#org9b6f336)
+- [References](#org3a95200)
 
 ---
 
-Last revision: 2022-09-30
+Last revision: 2023-12-30
 
 **News:**
 
@@ -17,7 +17,7 @@ Last revision: 2022-09-30
 ---
 
 
-<a id="org77e193f"></a>
+<a id="orgc8203dc"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -47,7 +47,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orgc15ebda"></a>
+<a id="orgaab7582"></a>
 
 # Social science using night lights
 
@@ -57,22 +57,24 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   A critical piece by Pinkowski and Sala-i-Martin [here](https://voxeu.org/article/gdp-measurement-accounts-surveys-and-lights).
 -   Growth reported relative to night lights by Martínez [here](https://bfi.uchicago.edu/insight/finding/how-much-should-we-trust-the-dictators-gdp-growth-estimates/).
 
+-   A Tweeter thread from Stanford AI Lab [here](https://twitter.com/yohaniddawela/status/1741063302988390465).
 
-<a id="org94d4c3c"></a>
+
+<a id="orgf689901"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org99f4f10"></a>
+<a id="org9b6f336"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="org0b38d38"></a>
+<a id="org3a95200"></a>
 
 # References
 
