@@ -1,6 +1,6 @@
-"edon","munn","mun","mean","sd","median","note"
-2,1,"ENSENADA",0.54,3.9,0,""
-2,2,"MEXICALI",4.26,10.69,0,""
-2,3,"TECATE",3.62,8.27,0,""
-2,4,"TIJUANA",29.08,26.21,19.8,""
-2,5,"PLAYAS DE ROSARITO",12.93,17.36,5.46,""
+"edon","ife","inegi","mun","mean","sd","median","note"
+2,2001,2001,"ENSENADA",0.54,3.9,0,NA
+2,2002,2002,"MEXICALI",4.26,10.69,0,NA
+2,2003,2003,"TECATE",3.62,8.27,0,NA
+2,2004,2004,"TIJUANA",29.08,26.21,19.8,NA
+2,2005,2005,"PLAYAS DE ROSARITO",12.93,17.36,5.46,NA
