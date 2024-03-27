@@ -1,14 +1,16 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgc8203dc)
-- [Social science using night lights](#orgaab7582)
-- [Acknowledgements](#orgf689901)
-- [Donate](#org9b6f336)
-- [References](#org3a95200)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org34f58c0)
+- [Social science using night lights](#org5f17b2b)
+- [Acknowledgements](#orgc0fc0be)
+- [Donate](#orgcc74bbb)
+- [References](#org141fd26)
 
 ---
 
 Last revision: 2023-12-30
 
 **News:**
+
+-   27mar2024 Possible update of the source data to 2021 [here](https://gee-community-catalog.org/projects/hntl/).
 
 -   30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Some over-populated secciones were split to create new units. Comments, critiques, and suggestions welcome by email.
 
@@ -17,7 +19,7 @@ Last revision: 2023-12-30
 ---
 
 
-<a id="orgc8203dc"></a>
+<a id="org34f58c0"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -47,7 +49,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="orgaab7582"></a>
+<a id="org5f17b2b"></a>
 
 # Social science using night lights
 
@@ -60,21 +62,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   A Tweeter thread from Stanford AI Lab [here](https://twitter.com/yohaniddawela/status/1741063302988390465).
 
 
-<a id="orgf689901"></a>
+<a id="orgc0fc0be"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org9b6f336"></a>
+<a id="orgcc74bbb"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="org3a95200"></a>
+<a id="org141fd26"></a>
 
 # References
 
