@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org34f58c0)
-- [Social science using night lights](#org5f17b2b)
-- [Acknowledgements](#orgc0fc0be)
-- [Donate](#orgcc74bbb)
-- [References](#org141fd26)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org02f9371)
+- [Social science using night lights](#org196a0bc)
+- [Acknowledgements](#org72f3f4c)
+- [Donate](#org0d5d504)
+- [References](#orgc2ed489)
 
 ---
 
@@ -19,7 +19,7 @@ Last revision: 2023-12-30
 ---
 
 
-<a id="org34f58c0"></a>
+<a id="org02f9371"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -49,7 +49,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org5f17b2b"></a>
+<a id="org196a0bc"></a>
 
 # Social science using night lights
 
@@ -60,23 +60,24 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   Growth reported relative to night lights by Martínez [here](https://bfi.uchicago.edu/insight/finding/how-much-should-we-trust-the-dictators-gdp-growth-estimates/).
 
 -   A Tweeter thread from Stanford AI Lab [here](https://twitter.com/yohaniddawela/status/1741063302988390465).
+-   George and Ponattu 2018 [Like father, like son? The economic impacts of political dynasties](http://barrett.dyson.cornell.edu/NEUDC/paper_550.pdf).
 
 
-<a id="orgc0fc0be"></a>
+<a id="org72f3f4c"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="orgcc74bbb"></a>
+<a id="org0d5d504"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="org141fd26"></a>
+<a id="orgc2ed489"></a>
 
 # References
 
