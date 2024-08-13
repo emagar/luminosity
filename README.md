@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org02f9371)
-- [Social science using night lights](#org196a0bc)
-- [Acknowledgements](#org72f3f4c)
-- [Donate](#org0d5d504)
-- [References](#orgc2ed489)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgf8a2082)
+- [Social science using night lights](#org472d1d9)
+- [Acknowledgements](#org38d88ae)
+- [Donate](#org5ee1ca9)
+- [References](#orga6d6890)
 
 ---
 
@@ -12,14 +12,14 @@ Last revision: 2023-12-30
 
 -   27mar2024 Possible update of the source data to 2021 [here](https://gee-community-catalog.org/projects/hntl/).
 
--   30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Some over-populated secciones were split to create new units. Comments, critiques, and suggestions welcome by email.
+-   30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Over-populated secciones are routinely split by INE, creating new units. Comments, critiques, and suggestions welcome by email.
 
 -   5may2021 `data/municipios/` and `data/secciones/` now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (e.g. secciones in urban areas), producing large but short-lived surges/declines in luminosity measure. Bug has been fixed and data cleaned.
 
 ---
 
 
-<a id="org02f9371"></a>
+<a id="orgf8a2082"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -49,7 +49,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org196a0bc"></a>
+<a id="org472d1d9"></a>
 
 # Social science using night lights
 
@@ -63,21 +63,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   George and Ponattu 2018 [Like father, like son? The economic impacts of political dynasties](http://barrett.dyson.cornell.edu/NEUDC/paper_550.pdf).
 
 
-<a id="org72f3f4c"></a>
+<a id="org38d88ae"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="org0d5d504"></a>
+<a id="org5ee1ca9"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="orgc2ed489"></a>
+<a id="orga6d6890"></a>
 
 # References
 

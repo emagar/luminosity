@@ -9,7 +9,7 @@ Last revision: 2023-12-30
 
 - 27mar2024 Possible update of the source data to 2021 [[https://gee-community-catalog.org/projects/hntl/][here]].
 
-- 30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Some over-populated secciones were split to create new units. Comments, critiques, and suggestions welcome by email.
+- 30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Over-populated secciones are routinely split by INE, creating new units. Comments, critiques, and suggestions welcome by email.
 
 - 5may2021 ~data/municipios/~ and ~data/secciones/~ now include luminosity measures for all 32 states. Validation detected a bug affecting smaller units (e.g. secciones in urban areas), producing large but short-lived surges/declines in luminosity measure. Bug has been fixed and data cleaned. 
 
