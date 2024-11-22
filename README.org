@@ -7,6 +7,8 @@ Last revision: 2023-12-30
 
 *News:* 
 
+- 22nov2024 Municipio series consolidated in a single file [[./data/municipios/0all/][here]] (by Juan Pablo Figueroa Mansur). 
+
 - 27mar2024 Possible update of the source data to 2021 [[https://gee-community-catalog.org/projects/hntl/][here]].
 
 - 30may2021 Measures re-computed using INE's 2020 maps (instead of 2018 maps). Over-populated secciones are routinely split by INE, creating new units. Comments, critiques, and suggestions welcome by email.
