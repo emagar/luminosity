@@ -7,7 +7,7 @@ Last revision: 2023-12-30
 
 *News:* 
 
-- 22nov2024 Municipio series consolidated in a single file [[./data/municipios/0all/][here]] (by Juan Pablo Figueroa Mansur). 
+- 22nov2024 Municipio series consolidated in a single file [[./data/municipios/0all/][here]] (by @jpfmansur Thank you!). 
 
 - 27mar2024 Possible update of the source data to 2021 [[https://gee-community-catalog.org/projects/hntl/][here]].
 

@@ -1,8 +1,8 @@
-- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#org5931fe1)
-- [Social science using night lights](#org2804a09)
-- [Acknowledgements](#org5186079)
-- [Donate](#orgfcb3ddc)
-- [References](#org9b28a4d)
+- [Description of *Nighttime lights in Mexico at units of substantive interest* repository](#orgab5a009)
+- [Social science using night lights](#org7b5f756)
+- [Acknowledgements](#org1b5e0c9)
+- [Donate](#orgeafc33e)
+- [References](#org61fe933)
 
 ---
 
@@ -10,7 +10,7 @@ Last revision: 2023-12-30
 
 **News:**
 
--   22nov2024 Municipio series consolidated in a single file [here](./data/municipios/0all/) (by Juan Pablo Figueroa Mansur).
+-   22nov2024 Municipio series consolidated in a single file [here](./data/municipios/0all/) (by @jpfmansur Thank you!).
 
 -   27mar2024 Possible update of the source data to 2021 [here](https://gee-community-catalog.org/projects/hntl/).
 
@@ -21,7 +21,7 @@ Last revision: 2023-12-30
 ---
 
 
-<a id="org5931fe1"></a>
+<a id="orgab5a009"></a>
 
 # Description of *Nighttime lights in Mexico at units of substantive interest* repository
 
@@ -51,7 +51,7 @@ The time series can be appreciated in the final figure below. The sección's rap
 ![img](./pics/bc-100-mask-1994-2018.png)
 
 
-<a id="org2804a09"></a>
+<a id="org7b5f756"></a>
 
 # Social science using night lights
 
@@ -65,21 +65,21 @@ The time series can be appreciated in the final figure below. The sección's rap
 -   George and Ponattu 2018 [Like father, like son? The economic impacts of political dynasties](http://barrett.dyson.cornell.edu/NEUDC/paper_550.pdf).
 
 
-<a id="org5186079"></a>
+<a id="org1b5e0c9"></a>
 
 # Acknowledgements
 
 Eric Magar is grateful for financial support from the Asociación Mexicana de Cultura A.C. He is responsible for mistakes and shortcomings in the data.
 
 
-<a id="orgfcb3ddc"></a>
+<a id="orgeafc33e"></a>
 
 # Donate
 
 If you find this useful, help buy a cup of coffee for the author and research assistants. [![img](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=FQDMH76GZC8WQ&currency_code=USD) with Paypal.
 
 
-<a id="org9b28a4d"></a>
+<a id="org61fe933"></a>
 
 # References
 
